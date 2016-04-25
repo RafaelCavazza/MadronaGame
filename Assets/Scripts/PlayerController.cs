@@ -96,12 +96,11 @@ public class PlayerController : MonoBehaviour
         var sin = Math.Sin(ConvertToRadians(360 - rotation));
         var cos = Math.Cos(ConvertToRadians(360 - rotation));
 
-        var startX = ((PlayerColider.radius / 2) * sin) + ((BarrelBoxColider.size.x / 2) * sin) + Barrel.transform.position.x;
-        var startY = ((PlayerColider.radius / 2) * cos) + ((BarrelBoxColider.size.y / 2) * cos) + Barrel.transform.position.y;
+        var startX = ((PlayerColider.radius) * sin) + ((BarrelBoxColider.size.x) * sin) + BarrelBoxColider.transform.position.x;
+        var startY = ((PlayerColider.radius) * cos) + ((BarrelBoxColider.size.y) * cos) + BarrelBoxColider.transform.position.y;
 
         rb2d.position = new Vector2((float)startX, (float)startY);
 
-        //----->
         isInBarrel = false;
         ShowPlayer();
         PlayerColider.enabled = true;
