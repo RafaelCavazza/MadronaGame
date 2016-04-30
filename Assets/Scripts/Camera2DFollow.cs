@@ -6,15 +6,19 @@ namespace UnityStandardAssets._2D
     public class Camera2DFollow : MonoBehaviour
     {
         public Transform target;
+        public GameObject LastBackgound;
         public float damping = 0;
         public float lookAheadFactor = 3;
         public float lookAheadReturnSpeed = 0.5f;
         public float lookAheadMoveThreshold = 0.1f;
+        public bool OnlyUpCamera = false;
+        public float BackgroundHeigthSensitvity = 4;
 
         private float m_OffsetZ;
         private Vector3 m_LastTargetPosition;
         private Vector3 m_CurrentVelocity;
         private Vector3 m_LookAheadPos;
+        private Transform cameraTransform;
 
         // Use this for initialization
         private void Start()
@@ -42,7 +46,17 @@ namespace UnityStandardAssets._2D
             Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
 
             newPos.x = transform.position.x;
-            if (newPos.y > transform.position.y)
+            CreatNewBackGround();
+            if (OnlyUpCamera)
+            {
+                if (newPos.y > transform.position.y)
+                {
+                    SetWallHeigth(newPos.y - transform.position.y);
+                    transform.position = newPos;
+                    m_LastTargetPosition = target.position;
+                }
+            }
+            else
             {
                 SetWallHeigth(newPos.y - transform.position.y);
                 transform.position = newPos;
@@ -66,5 +80,48 @@ namespace UnityStandardAssets._2D
             }
         }
 
+        /// <summary>
+        /// <para> cria um novo BackGround se estiver na altura certa. </para>
+        /// </summary>
+        void CreatNewBackGround()
+        {
+            if (LastBackgound == null)
+                return;
+
+            if (isMaxHeight())
+            {
+                var new_LastBackgound = GameObject.Instantiate(LastBackgound);
+                var transform = new_LastBackgound.GetComponent<Transform>();
+                var sprite = new_LastBackgound.GetComponent<SpriteRenderer>();
+
+                transform.position = new Vector3(transform.position.x, transform.position.y + (sprite.bounds.extents.y * 2));
+
+                new_LastBackgound.name = SetNameNewBackGround();
+                this.LastBackgound = new_LastBackgound;
+            }
+        }
+
+        /// <summary>
+        /// <para> Define o nome para novo BackGround </para>
+        /// </summary>
+        /// <returns></returns>
+        private string SetNameNewBackGround()
+        {
+             var numberStr = LastBackgound.name.Split('_')[1];
+             int number = int.Parse(numberStr) + 1;
+             string new_name = "BackGroundSky_" + number.ToString();
+             return new_name;
+        }
+
+        /// <summary>
+        /// <para> Calcula se está na altura correta para criar mais um background. </para>
+        /// </summary>
+        /// <returns></returns>
+        private bool isMaxHeight()
+        {
+            var currentHeight = this.transform.position.y;
+            var LastBackgoundHeight = LastBackgound.GetComponent<Transform>().position.y;
+            return (currentHeight + BackgroundHeigthSensitvity) > LastBackgoundHeight;
+        }
     }
 }

@@ -7,6 +7,8 @@ TagManager:
   - Barrel
   - Box
   - PickUp
+  - BackGround
+  - BackGroundRepeat
   layers:
   - Default
   - TransparentFX
