@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpForce;
 
-
     private Rigidbody2D rb2d;
     private float _tempGravityScale = 0;
     private bool isInBarrel = false;
@@ -55,6 +54,7 @@ public class PlayerController : MonoBehaviour
             rb2d.velocity = new Vector2(0, 0);
             DisableGravity();
             isInBarrel = true;
+            Debug.Log("Colidiu");
             HidePlayer();
         }
     }
@@ -92,20 +92,23 @@ public class PlayerController : MonoBehaviour
     {
         var rotation = Barrel.transform.rotation.eulerAngles.z;
 
-        //-----> 
         var sin = Math.Sin(ConvertToRadians(360 - rotation));
         var cos = Math.Cos(ConvertToRadians(360 - rotation));
+        var spriteSize = this.GetComponent<SpriteRenderer>().bounds.size;
 
-        var startX = ((PlayerColider.radius) * sin) + ((BarrelBoxColider.size.x) * sin) + BarrelBoxColider.transform.position.x;
-        var startY = ((PlayerColider.radius) * cos) + ((BarrelBoxColider.size.y) * cos) + BarrelBoxColider.transform.position.y;
-
-        rb2d.position = new Vector2((float)startX, (float)startY);
+        var startX = (((PlayerColider.radius) * this.transform.lossyScale.x) * sin * 1.1f) + (((BarrelBoxColider.size.y/2) * Barrel.transform.lossyScale.y) * sin) + BarrelBoxColider.transform.position.x;
+        var startY = (((PlayerColider.radius) * this.transform.lossyScale.y) * cos * 1.1f) + (((BarrelBoxColider.size.y/2) * Barrel.transform.lossyScale.y) * cos) + BarrelBoxColider.transform.position.y;
 
         isInBarrel = false;
-        ShowPlayer();
-        PlayerColider.enabled = true;
+        
+        
+        this.transform.position = new Vector2((float)startX, (float)startY);
         rb2d.velocity = new Vector2((float)sin, (float)cos) * jumpForce;
+
+        //Barrel.gameObject.SendMessage("StopRotation");
+        PlayerColider.enabled = true;
         EnableGravity();
+        ShowPlayer();
     }
 
     public double ConvertToRadians(double angle)

@@ -9,6 +9,7 @@ TagManager:
   - PickUp
   - BackGround
   - BackGroundRepeat
+  - Enemy
   layers:
   - Default
   - TransparentFX
