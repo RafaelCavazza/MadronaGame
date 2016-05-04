@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpForce;
 
+    public bool Pow { get; set; }
     private Rigidbody2D rb2d;
     private float _tempGravityScale = 0;
     private bool isInBarrel = false;
@@ -99,9 +100,9 @@ public class PlayerController : MonoBehaviour
         var startX = (((PlayerColider.radius) * this.transform.lossyScale.x) * sin * 1.1f) + (((BarrelBoxColider.size.y/2) * Barrel.transform.lossyScale.y) * sin) + BarrelBoxColider.transform.position.x;
         var startY = (((PlayerColider.radius) * this.transform.lossyScale.y) * cos * 1.1f) + (((BarrelBoxColider.size.y/2) * Barrel.transform.lossyScale.y) * cos) + BarrelBoxColider.transform.position.y;
 
+        Pow = true;
         isInBarrel = false;
-        
-        
+
         this.transform.position = new Vector2((float)startX, (float)startY);
         rb2d.velocity = new Vector2((float)sin, (float)cos) * jumpForce;
 
