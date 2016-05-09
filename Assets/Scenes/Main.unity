@@ -1335,6 +1335,7 @@ GameObject:
   - 124: {fileID: 744507532}
   - 81: {fileID: 744507531}
   - 114: {fileID: 744507536}
+  - 114: {fileID: 744507537}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1381,7 +1382,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 150
+  field of view: 145
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1428,6 +1429,17 @@ MonoBehaviour:
   lookAheadMoveThreshold: 1
   OnlyUpCamera: 0
   BackgroundHeigthSensitvity: 40
+--- !u!114 &744507537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 744507530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369e9b1e2dcd93545b24357e19526d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &787587464
 GameObject:
   m_ObjectHideFlags: 0
