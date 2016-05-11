@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class NewGame : MonoBehaviour {
 
@@ -16,7 +17,7 @@ public class NewGame : MonoBehaviour {
         if(click && !starGame)
         {
             starGame = true;
-            Application.LoadLevel("Main");
+            SceneManager.LoadScene("Main");
         }
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Fire : MonoBehaviour
 {
@@ -16,15 +17,15 @@ public class Fire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.Pow)
-        transform.position += Vector3.up * UpForce;
+        if (player.Pow)
+            transform.position += Vector3.up * UpForce;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Player")
-            Debug.Break();
-       else if(other.tag.Equals("Barrel"))
+        if (other.tag.Equals("Player"))
+            SceneManager.LoadScene("GameOver");
+        else if (other.tag.Equals("Barrel"))
             Destroy(other.gameObject);
     }
 }

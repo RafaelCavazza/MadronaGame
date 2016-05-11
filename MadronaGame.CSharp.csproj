@@ -69,16 +69,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ButtonScript.cs" />
     <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
     <Compile Include="Assets\Scripts\CompleteCameraController.cs" />
     <Compile Include="Assets\Scripts\CompletePlayerController.cs" />
     <Compile Include="Assets\Scripts\CompleteRotator.cs" />
     <Compile Include="Assets\Scripts\Fire.cs" />
-    <Compile Include="Assets\Scripts\FireAnimation.cs" />
+    <Compile Include="Assets\Scripts\GameOverScript.cs" />
     <Compile Include="Assets\Scripts\HUDScript.cs" />
-    <Compile Include="Assets\Scripts\MenuCamera.cs" />
     <Compile Include="Assets\Scripts\NewGame.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\StageCompleteScript.cs" />
     <Compile Include="Assets\Scripts\WoodenBarrel.cs" />
   </ItemGroup>
   <ItemGroup>
