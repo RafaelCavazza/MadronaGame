@@ -8,7 +8,7 @@ public class WoodenBarrel : MonoBehaviour {
     public float RotationDirection = 1;
     public float ExitSpeed = 30;
 
-    private Vector3 StatedPosition;
+    private Vector2 StartedPosition;
 
     public  bool   MoveXAxis;
     public  float  MoveXAxisValue;
@@ -26,7 +26,7 @@ public class WoodenBarrel : MonoBehaviour {
    
 	void Start ()
 	{
-	    StatedPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+	    StartedPosition = new Vector2(transform.position.x, transform.position.y);
         System.Random rand = new System.Random();
         if (random)
         {
@@ -53,7 +53,7 @@ public class WoodenBarrel : MonoBehaviour {
     void MoveBarrel()
     {
         if(DownSpeed!=0)
-            this.transform.position = new Vector3(transform.position.x, transform.position.y - DownSpeed, 0);
+            this.transform.position = new Vector2(transform.position.x, transform.position.y - DownSpeed);
     }
 
     void StopRotation()
@@ -72,29 +72,29 @@ public class WoodenBarrel : MonoBehaviour {
         if (!MoveYAxis)
             return;
 
-        var addPositoin = (MoveYAxisSpeed * MoveYAxisValue); //Posição a Ser Adicionada no Elemento
+        var addPosition = (MoveYAxisSpeed * MoveYAxisValue); //Posição a Ser Adicionada no Elemento
 
         if (!MoveYAxisDownToUp) //se estiver movendo da esquerda para direira
-            addPositoin = addPositoin * -1;
+            addPosition = addPosition * -1;
 
         if (MoveYAxisDownToUp) //Se está Movendo da esquerda par direita
         {
-            addPositoin = ((addPositoin + transform.position.y) > MoveYAxisLimitValue()) ? MoveYAxisLimitValue() - transform.position.y : addPositoin;
-            if (((addPositoin + transform.position.y) >= MoveYAxisLimitValue()))
+            addPosition = ((addPosition + transform.position.y) > MoveYAxisLimitValue()) ? MoveYAxisLimitValue() - transform.position.y : addPosition;
+            if (((addPosition + transform.position.y) >= MoveYAxisLimitValue()))
             {
                 MoveYAxisDownToUp = false;
             }
         }
         else
         {
-            addPositoin = ((addPositoin + transform.position.y) < MoveYAxisLimitValue()) ? MoveYAxisLimitValue() - transform.position.y : addPositoin;
-            if ((addPositoin + transform.position.y) <= MoveYAxisLimitValue())
+            addPosition = ((addPosition + transform.position.y) < MoveYAxisLimitValue()) ? MoveYAxisLimitValue() - transform.position.y : addPosition;
+            if ((addPosition + transform.position.y) <= MoveYAxisLimitValue())
             {
                 MoveYAxisDownToUp = true;
             }
         }
 
-        transform.position = new Vector3(transform.position.x, transform.position.y+ addPositoin, transform.position.z);
+        transform.position = new Vector2(transform.position.x, transform.position.y+ addPosition);
     }
 
     void MoveXAxisFunc()
@@ -102,29 +102,29 @@ public class WoodenBarrel : MonoBehaviour {
         if (!MoveXAxis)
             return;
 
-        var addPositoin = (MoveXAxisSpeed * MoveXAxisValue); //Posição a Ser Adicionada no Elemento
+        var addPosition = (MoveXAxisSpeed * MoveXAxisValue); //Posição a Ser Adicionada no Elemento
 
         if (!MoveXAxisLeftToRigth) //se estiver movendo da esquerda para direira
-            addPositoin = addPositoin*-1;
+            addPosition = addPosition*-1;
 
         if (MoveXAxisLeftToRigth) //Se está Movendo da esquerda par direita
         {
-            addPositoin = ((addPositoin + transform.position.x) > MoveXAxisLimitValue()) ? MoveXAxisLimitValue() - transform.position.x : addPositoin;
-            if (((addPositoin + transform.position.x) >= MoveXAxisLimitValue()))
+            addPosition = ((addPosition + transform.position.x) > MoveXAxisLimitValue()) ? MoveXAxisLimitValue() - transform.position.x : addPosition;
+            if (((addPosition + transform.position.x) >= MoveXAxisLimitValue()))
             {
                 MoveXAxisLeftToRigth = false;
             }
         }
         else
         {
-            addPositoin = ((addPositoin + transform.position.x) < MoveXAxisLimitValue()) ? MoveXAxisLimitValue() - transform.position.x : addPositoin;
-            if ((addPositoin + transform.position.x) <= MoveXAxisLimitValue())
+            addPosition = ((addPosition + transform.position.x) < MoveXAxisLimitValue()) ? MoveXAxisLimitValue() - transform.position.x : addPosition;
+            if ((addPosition + transform.position.x) <= MoveXAxisLimitValue())
             {
                 MoveXAxisLeftToRigth = true;
             }
         }
 
-        transform.position = new Vector3(transform.position.x + addPositoin, transform.position.y, transform.position.z); 
+        transform.position = new Vector2(transform.position.x + addPosition, transform.position.y); 
     }
 
     float MoveXAxisLimitValue()
@@ -132,14 +132,14 @@ public class WoodenBarrel : MonoBehaviour {
         if (MoveXAxisCentered)
         {
             if(MoveXAxisLeftToRigth)
-                return StatedPosition.x + (MoveXAxisValue/2);
-            return StatedPosition.x - (MoveXAxisValue / 2);
+                return StartedPosition.x + (MoveXAxisValue/2);
+            return StartedPosition.x - (MoveXAxisValue / 2);
         }
         else
         {
             if (MoveXAxisLeftToRigth)
-                return StatedPosition.x + (MoveXAxisValue);
-            return StatedPosition.x;
+                return StartedPosition.x + (MoveXAxisValue);
+            return StartedPosition.x;
         }
     }
 
@@ -148,14 +148,14 @@ public class WoodenBarrel : MonoBehaviour {
         if (MoveYAxisCentered)
         {
             if (MoveYAxisDownToUp)
-                return StatedPosition.y + (MoveYAxisValue / 2);
-            return StatedPosition.y - (MoveYAxisValue / 2);
+                return StartedPosition.y + (MoveYAxisValue / 2);
+            return StartedPosition.y - (MoveYAxisValue / 2);
         }
         else
         {
             if (MoveYAxisDownToUp)
-                return StatedPosition.y + (MoveYAxisValue);
-            return StatedPosition.y;
+                return StartedPosition.y + (MoveYAxisValue);
+            return StartedPosition.y;
         }
     }
 

@@ -18,7 +18,6 @@ namespace UnityStandardAssets._2D
         private Vector3 m_LastTargetPosition;
         private Vector3 m_CurrentVelocity;
         private Vector3 m_LookAheadPos;
-        private Transform cameraTransform;
 
         // Use this for initialization
         private void Start()
@@ -94,7 +93,7 @@ namespace UnityStandardAssets._2D
                 var transform = new_LastBackgound.GetComponent<Transform>();
                 var sprite = new_LastBackgound.GetComponent<SpriteRenderer>();
 
-                transform.position = new Vector3(transform.position.x, transform.position.y + (sprite.bounds.extents.y * 2));
+                transform.position = new Vector2(transform.position.x, transform.position.y + (sprite.bounds.extents.y * 2));
 
                 new_LastBackgound.name = SetNameNewBackGround();
                 this.LastBackgound = new_LastBackgound;

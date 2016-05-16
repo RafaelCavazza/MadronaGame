@@ -26,6 +26,8 @@ public class Fire : MonoBehaviour
         if (other.tag.Equals("Player"))
             SceneManager.LoadScene("GameOver");
         else if (other.tag.Equals("Barrel"))
+        {
             Destroy(other.gameObject);
+        }
     }
 }

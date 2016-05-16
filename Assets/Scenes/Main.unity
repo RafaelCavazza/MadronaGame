@@ -85,206 +85,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &9835545
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 9835549}
-  - 212: {fileID: 9835548}
-  - 61: {fileID: 9835547}
-  - 114: {fileID: 9835546}
-  m_Layer: 0
-  m_Name: WoodenBarrel (3)
-  m_TagString: Barrel
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &9835546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 9835545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2902725b75ee6dc4681940c6a07e883d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rotation: 3
-  DownSpeed: 0
-  RotationDirection: 1
-  ExitSpeed: 30
-  MoveXAxis: 0
-  MoveXAxisValue: 0
-  MoveXAxisSpeed: 0
-  MoveXAxisLeftToRigth: 1
-  MoveXAxisCentered: 1
-  MoveYAxis: 0
-  MoveYAxisValue: 0
-  MoveYAxisSpeed: 0
-  MoveYAxisDownToUp: 0
-  MoveYAxisCentered: 1
-  random: 0
---- !u!61 &9835547
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 9835545}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 12, y: 16}
---- !u!212 &9835548
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 9835545}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1338097493
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 948185cd8e33f5b4394c5261fa472d66, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
---- !u!4 &9835549
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 9835545}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 6.7, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
---- !u!1 &163951799
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 163951803}
-  - 212: {fileID: 163951802}
-  - 61: {fileID: 163951801}
-  - 114: {fileID: 163951800}
-  m_Layer: 0
-  m_Name: WoodenBarrel (6)
-  m_TagString: Barrel
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &163951800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 163951799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2902725b75ee6dc4681940c6a07e883d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rotation: 3
-  DownSpeed: 0
-  RotationDirection: 1
-  ExitSpeed: 30
-  MoveXAxis: 0
-  MoveXAxisValue: 0
-  MoveXAxisSpeed: 0
-  MoveXAxisLeftToRigth: 1
-  MoveXAxisCentered: 1
-  MoveYAxis: 0
-  MoveYAxisValue: 0
-  MoveYAxisSpeed: 0
-  MoveYAxisDownToUp: 0
-  MoveYAxisCentered: 1
-  random: 0
---- !u!61 &163951801
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 163951799}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 12, y: 16}
---- !u!212 &163951802
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 163951799}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1338097493
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 948185cd8e33f5b4394c5261fa472d66, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
---- !u!4 &163951803
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 163951799}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.6, y: 54.1, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
 --- !u!1 &260272830
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +97,7 @@ GameObject:
   - 61: {fileID: 260272832}
   - 114: {fileID: 260272831}
   m_Layer: 0
-  m_Name: WoodenBarrel (13)
+  m_Name: Barril 8
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,75 +180,63 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 260272830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.5, y: 155, z: 0}
+  m_LocalPosition: {x: 30, y: 155, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
---- !u!1 &340173688
+  m_RootOrder: 11
+--- !u!1 &397585292
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 340173692}
-  - 212: {fileID: 340173691}
-  - 61: {fileID: 340173690}
-  - 114: {fileID: 340173689}
+  - 4: {fileID: 397585296}
+  - 212: {fileID: 397585295}
+  - 61: {fileID: 397585294}
+  - 61: {fileID: 397585293}
   m_Layer: 0
-  m_Name: WoodenBarrel (1)
-  m_TagString: Barrel
+  m_Name: Background 2
+  m_TagString: BackGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &340173689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 340173688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2902725b75ee6dc4681940c6a07e883d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rotation: 3
-  DownSpeed: 0
-  RotationDirection: -1
-  ExitSpeed: 30
-  MoveXAxis: 0
-  MoveXAxisValue: 30
-  MoveXAxisSpeed: 0.05
-  MoveXAxisLeftToRigth: 1
-  MoveXAxisCentered: 1
-  MoveYAxis: 1
-  MoveYAxisValue: 10
-  MoveYAxisSpeed: 0.05
-  MoveYAxisDownToUp: 1
-  MoveYAxisCentered: 0
-  random: 0
---- !u!61 &340173690
+--- !u!61 &397585293
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 340173688}
+  m_GameObject: {fileID: 397585292}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 9.5, y: -2}
   serializedVersion: 2
-  m_Size: {x: 12, y: 16}
---- !u!212 &340173691
+  m_Size: {x: 0.01, y: 30}
+--- !u!61 &397585294
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397585292}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -9.5, y: -2}
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 30}
+--- !u!212 &397585295
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 340173688}
+  m_GameObject: {fileID: 397585292}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -467,24 +255,24 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1338097493
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 948185cd8e33f5b4394c5261fa472d66, type: 3}
+  m_SortingLayerID: 389218567
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: f367e4e18eac7924e88910afe9a5c7ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!4 &340173692
+--- !u!4 &397585296
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 340173688}
+  m_GameObject: {fileID: 397585292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -33.3, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalPosition: {x: 0, y: -50, z: 0}
+  m_LocalScale: {x: 4.5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 24
 --- !u!1 &411900351
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +285,7 @@ GameObject:
   - 61: {fileID: 411900353}
   - 114: {fileID: 411900352}
   m_Layer: 0
-  m_Name: WoodenBarrel (12)
+  m_Name: Barril 7
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,11 +368,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 411900351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.5, y: 136.9, z: 0}
+  m_LocalPosition: {x: -10, y: 120, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 10
 --- !u!1 &502143245
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,8 +403,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db80077e8a7e2a2499aa53dae74776e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
-  jumpForce: 80
+  speed: 50
+  jumpForce: 100
 --- !u!50 &502143247
 Rigidbody2D:
   serializedVersion: 2
@@ -628,7 +416,7 @@ Rigidbody2D:
   m_Mass: 50.265484
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -671,7 +459,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 502143245}
   m_LocalRotation: {x: 0, y: 0, z: 0.008726536, w: 0.9999619}
-  m_LocalPosition: {x: -19.6, y: -41.4, z: 0}
+  m_LocalPosition: {x: -20, y: -20, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -695,15 +483,15 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1936698192}
     m_Modifications:
     - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -39
+      value: -42
       objectReference: {fileID: 0}
     - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -80
+      value: -36
       objectReference: {fileID: 0}
     - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_LocalPosition.z
@@ -727,11 +515,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 197824, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_Name
-      value: Fogo (2)
+      value: Firebar_3
       objectReference: {fileID: 0}
     - target: {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: player
@@ -739,9 +527,16 @@ Prefab:
       objectReference: {fileID: 502143246}
     - target: {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: UpForce
-      value: 0.2
+      value: 0.6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 197824, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_TagString
+      value: Fire
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6188334, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+    - {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+    - {fileID: 5079318, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &529303895
@@ -756,7 +551,7 @@ GameObject:
   - 61: {fileID: 529303897}
   - 114: {fileID: 529303896}
   m_Layer: 0
-  m_Name: WoodenBarrel (22)
+  m_Name: Barril 16
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -839,11 +634,15 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529303895}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.8, y: 277.2, z: 0}
+  m_LocalPosition: {x: -25, y: 280, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 19
+--- !u!4 &600774649 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+  m_PrefabInternal: {fileID: 521969451}
 --- !u!1 &615678803
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,7 +743,7 @@ GameObject:
   - 61: {fileID: 617773234}
   - 114: {fileID: 617773233}
   m_Layer: 0
-  m_Name: WoodenBarrel (2)
+  m_Name: Barril 1
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1027,11 +826,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 617773232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.4, y: -14.7, z: 0}
+  m_LocalPosition: {x: 24.4, y: -5, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &649539064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +843,7 @@ GameObject:
   - 61: {fileID: 649539066}
   - 114: {fileID: 649539065}
   m_Layer: 0
-  m_Name: WoodenBarrel (21)
+  m_Name: Barril 15
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1131,7 +930,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 18
 --- !u!1 &704354050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,7 +943,7 @@ GameObject:
   - 61: {fileID: 704354052}
   - 114: {fileID: 704354051}
   m_Layer: 0
-  m_Name: WoodenBarrel (15)
+  m_Name: Barril 10
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1231,7 +1030,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 13
 --- !u!1 &721149771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,7 +1043,7 @@ GameObject:
   - 61: {fileID: 721149773}
   - 114: {fileID: 721149772}
   m_Layer: 0
-  m_Name: WoodenBarrel (10)
+  m_Name: Barril 6
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1327,11 +1126,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 721149771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.9, y: 119.7, z: 0}
+  m_LocalPosition: {x: 20, y: 120, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 9
 --- !u!1 &744323932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,7 +1143,7 @@ GameObject:
   - 61: {fileID: 744323934}
   - 114: {fileID: 744323933}
   m_Layer: 0
-  m_Name: WoodenBarrel (14)
+  m_Name: Barril 9
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1427,11 +1226,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 744323932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.8, y: 152.6, z: 0}
+  m_LocalPosition: {x: -30, y: 150, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 12
 --- !u!1 &744507530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,9 +1291,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 145
-  orthographic: 0
-  orthographic size: 5
+  field of view: 165
+  orthographic: 1
+  orthographic size: 75
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1538,7 +1337,7 @@ MonoBehaviour:
   lookAheadReturnSpeed: 1
   lookAheadMoveThreshold: 1
   OnlyUpCamera: 0
-  BackgroundHeigthSensitvity: 40
+  BackgroundHeigthSensitvity: 50
 --- !u!114 &744507537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1550,106 +1349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369e9b1e2dcd93545b24357e19526d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &787587464
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 787587468}
-  - 212: {fileID: 787587467}
-  - 61: {fileID: 787587466}
-  - 114: {fileID: 787587465}
-  m_Layer: 0
-  m_Name: WoodenBarrel (17)
-  m_TagString: Barrel
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &787587465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 787587464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2902725b75ee6dc4681940c6a07e883d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rotation: 3
-  DownSpeed: 0
-  RotationDirection: 1
-  ExitSpeed: 30
-  MoveXAxis: 0
-  MoveXAxisValue: 0
-  MoveXAxisSpeed: 0
-  MoveXAxisLeftToRigth: 1
-  MoveXAxisCentered: 1
-  MoveYAxis: 0
-  MoveYAxisValue: 0
-  MoveYAxisSpeed: 0
-  MoveYAxisDownToUp: 0
-  MoveYAxisCentered: 1
-  random: 0
---- !u!61 &787587466
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 787587464}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 12, y: 16}
---- !u!212 &787587467
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 787587464}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1338097493
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 948185cd8e33f5b4394c5261fa472d66, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
---- !u!4 &787587468
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 787587464}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3, y: 208.2, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
 --- !u!1 &788766260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,8 +1404,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 788766260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 95.7, z: 0}
-  m_LocalScale: {x: 4.5, y: 4.334778, z: 1}
+  m_LocalPosition: {x: 0, y: 95, z: 0}
+  m_LocalScale: {x: 4.5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1750,7 +1449,7 @@ GameObject:
   - 61: {fileID: 834048685}
   - 114: {fileID: 834048684}
   m_Layer: 0
-  m_Name: WoodenBarrel (18)
+  m_Name: Barril 12
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1837,7 +1536,72 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 15
+--- !u!4 &834780983 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+  m_PrefabInternal: {fileID: 1184933816}
+--- !u!1001 &875207495
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1936698192}
+    m_Modifications:
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -42
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -46
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 197824, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_Name
+      value: Firebar_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 502143246}
+    - target: {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: UpForce
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 197824, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_TagString
+      value: Fire
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6188334, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+    - {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+    - {fileID: 5079318, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &948302738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,7 +1614,7 @@ GameObject:
   - 61: {fileID: 948302740}
   - 114: {fileID: 948302739}
   m_Layer: 0
-  m_Name: WoodenBarrel (16)
+  m_Name: Barril 11
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1937,7 +1701,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 14
 --- !u!1 &1034555175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,7 +1731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2902725b75ee6dc4681940c6a07e883d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rotation: 3
+  Rotation: 0
   DownSpeed: 0
   RotationDirection: 1
   ExitSpeed: 30
@@ -2033,11 +1797,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1034555175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19, y: -54, z: 0}
+  m_LocalPosition: {x: -20, y: -50, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 21
 --- !u!1 &1048137256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,7 +1814,7 @@ GameObject:
   - 61: {fileID: 1048137258}
   - 114: {fileID: 1048137257}
   m_Layer: 0
-  m_Name: WoodenBarrel (9)
+  m_Name: Barril 5
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2133,25 +1897,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1048137256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.9, y: 105.3, z: 0}
+  m_LocalPosition: {x: -25, y: 85, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 8
 --- !u!1001 &1184933816
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1936698192}
     m_Modifications:
     - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -39
+      value: -42
       objectReference: {fileID: 0}
     - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -70
+      value: -26
       objectReference: {fileID: 0}
     - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2175,11 +1939,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_RootOrder
-      value: 27
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 197824, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_Name
-      value: Fogo
+      value: Firebar_1
       objectReference: {fileID: 0}
     - target: {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: player
@@ -2187,11 +1951,22 @@ Prefab:
       objectReference: {fileID: 502143246}
     - target: {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: UpForce
-      value: 0.2
+      value: 0.6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 197824, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_TagString
+      value: Fire
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+    - {fileID: 5079318, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+    - {fileID: 6188334, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1229395340 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+  m_PrefabInternal: {fileID: 2031994244}
 --- !u!1 &1242262668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,7 +1979,7 @@ GameObject:
   - 61: {fileID: 1242262670}
   - 114: {fileID: 1242262669}
   m_Layer: 0
-  m_Name: WoodenBarrel (19)
+  m_Name: Barril 13
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2291,7 +2066,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 16
 --- !u!1 &1321859257
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,7 +2079,7 @@ GameObject:
   - 61: {fileID: 1321859259}
   - 114: {fileID: 1321859258}
   m_Layer: 0
-  m_Name: WoodenBarrel (8)
+  m_Name: Barril 4
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2387,11 +2162,15 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1321859257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: 85.9, z: 0}
+  m_LocalPosition: {x: 25, y: 85, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 7
+--- !u!4 &1471643811 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+  m_PrefabInternal: {fileID: 1896401428}
 --- !u!1 &1511612757
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,7 +2183,7 @@ GameObject:
   - 61: {fileID: 1511612759}
   - 114: {fileID: 1511612758}
   m_Layer: 0
-  m_Name: WoodenBarrel (23)
+  m_Name: Barril 17
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2491,7 +2270,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 20
 --- !u!1 &1535749473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,7 +2283,7 @@ GameObject:
   - 61: {fileID: 1535749475}
   - 114: {fileID: 1535749474}
   m_Layer: 0
-  m_Name: WoodenBarrel (20)
+  m_Name: Barril 14
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2591,21 +2370,21 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 17
 --- !u!1001 &1896401428
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1936698192}
     m_Modifications:
     - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -39
+      value: -42
       objectReference: {fileID: 0}
     - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -75
+      value: -31
       objectReference: {fileID: 0}
     - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2629,11 +2408,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_RootOrder
-      value: 28
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 197824, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: m_Name
-      value: Fogo (1)
+      value: Firebar_2
       objectReference: {fileID: 0}
     - target: {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: player
@@ -2641,9 +2420,156 @@ Prefab:
       objectReference: {fileID: 502143246}
     - target: {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
       propertyPath: UpForce
-      value: 0.2
+      value: 0.6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 197824, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_TagString
+      value: Fire
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+    - {fileID: 5079318, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+    - {fileID: 6188334, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1936698191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1936698192}
+  - 61: {fileID: 1936698195}
+  - 50: {fileID: 1936698194}
+  - 114: {fileID: 1936698193}
+  m_Layer: 0
+  m_Name: Fire
+  m_TagString: Fire
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1936698192
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936698191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3, y: -55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 834780983}
+  - {fileID: 1471643811}
+  - {fileID: 600774649}
+  - {fileID: 1229395340}
+  - {fileID: 2102334738}
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+--- !u!114 &1936698193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936698191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97623307acf5e1c4680061b43fb6e65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpForce: 0.35
+  player: {fileID: 502143246}
+--- !u!50 &1936698194
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936698191}
+  m_UseAutoMass: 1
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &1936698195
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936698191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -3, y: -37}
+  serializedVersion: 2
+  m_Size: {x: 83, y: 27}
+--- !u!1001 &2031994244
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1936698192}
+    m_Modifications:
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -42
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -41
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 197824, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_Name
+      value: Firebar_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 502143246}
+    - target: {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: UpForce
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 197824, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+      propertyPath: m_TagString
+      value: Fire
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6188334, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+    - {fileID: 11442606, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+    - {fileID: 5079318, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2048302384
@@ -2719,7 +2645,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 22
 --- !u!114 &2048302388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2743,7 +2669,7 @@ GameObject:
   - 61: {fileID: 2092204185}
   - 114: {fileID: 2092204184}
   m_Layer: 0
-  m_Name: WoodenBarrel (4)
+  m_Name: Barril 2
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2826,11 +2752,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2092204183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.5, y: 12.9, z: 0}
+  m_LocalPosition: {x: -20, y: 16, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &2100309469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,7 +2769,7 @@ GameObject:
   - 61: {fileID: 2100309471}
   - 114: {fileID: 2100309470}
   m_Layer: 0
-  m_Name: WoodenBarrel (7)
+  m_Name: Barril 3
   m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2926,108 +2852,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2100309469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.5, y: 73.5, z: 0}
+  m_LocalPosition: {x: 0, y: 50, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
---- !u!1 &2109322153
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2109322157}
-  - 212: {fileID: 2109322156}
-  - 61: {fileID: 2109322155}
-  - 114: {fileID: 2109322154}
-  m_Layer: 0
-  m_Name: WoodenBarrel (5)
-  m_TagString: Barrel
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2109322154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2109322153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2902725b75ee6dc4681940c6a07e883d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rotation: 3
-  DownSpeed: 0
-  RotationDirection: 1
-  ExitSpeed: 30
-  MoveXAxis: 0
-  MoveXAxisValue: 0
-  MoveXAxisSpeed: 0
-  MoveXAxisLeftToRigth: 1
-  MoveXAxisCentered: 1
-  MoveYAxis: 0
-  MoveYAxisValue: 0
-  MoveYAxisSpeed: 0
-  MoveYAxisDownToUp: 0
-  MoveYAxisCentered: 1
-  random: 0
---- !u!61 &2109322155
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2109322153}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 12, y: 16}
---- !u!212 &2109322156
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2109322153}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1338097493
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 948185cd8e33f5b4394c5261fa472d66, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
---- !u!4 &2109322157
+  m_RootOrder: 6
+--- !u!4 &2102334738 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2109322153}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.9, y: 36.2, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_PrefabParentObject: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
+  m_PrefabInternal: {fileID: 875207495}

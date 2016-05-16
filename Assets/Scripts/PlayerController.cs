@@ -23,25 +23,10 @@ public class PlayerController : MonoBehaviour
         PlayerColider = GetComponent<CircleCollider2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-    }
-
-    //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
-    void FixedUpdate()
-    {
-        var key = Input.GetKey(KeyCode.Q);
-
-        if (key && isInBarrel)
-        {
+        if (Input.GetMouseButton(0) && isInBarrel)
             ExitBarel();
-        }
-    }
-
-    void SetCameraPosition()
-    {
-        return;
     }
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -55,7 +40,6 @@ public class PlayerController : MonoBehaviour
             rb2d.velocity = new Vector2(0, 0);
             DisableGravity();
             isInBarrel = true;
-            Debug.Log("Colidiu");
             HidePlayer();
         }
     }
@@ -95,10 +79,9 @@ public class PlayerController : MonoBehaviour
 
         var sin = Math.Sin(ConvertToRadians(360 - rotation));
         var cos = Math.Cos(ConvertToRadians(360 - rotation));
-        var spriteSize = this.GetComponent<SpriteRenderer>().bounds.size;
 
-        var startX = (((PlayerColider.radius) * this.transform.lossyScale.x) * sin * 1.1f) + (((BarrelBoxColider.size.y/2) * Barrel.transform.lossyScale.y) * sin) + BarrelBoxColider.transform.position.x;
-        var startY = (((PlayerColider.radius) * this.transform.lossyScale.y) * cos * 1.1f) + (((BarrelBoxColider.size.y/2) * Barrel.transform.lossyScale.y) * cos) + BarrelBoxColider.transform.position.y;
+        var startX = (((PlayerColider.radius) * this.transform.lossyScale.x) * sin * 1.1f) + (((BarrelBoxColider.size.y / 2) * Barrel.transform.lossyScale.y) * sin) + BarrelBoxColider.transform.position.x;
+        var startY = (((PlayerColider.radius) * this.transform.lossyScale.y) * cos * 1.1f) + (((BarrelBoxColider.size.y / 2) * Barrel.transform.lossyScale.y) * cos) + BarrelBoxColider.transform.position.y;
 
         Pow = true;
         isInBarrel = false;

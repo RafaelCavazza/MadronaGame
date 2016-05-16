@@ -6,7 +6,7 @@ public class GameOverScript : MonoBehaviour
 {
     void OnGUI()
     {
-        if (GUI.Button(new Rect(Screen.width / 2 - 40, 200, 60, 30), "Repetir?"))
+        if (GUI.Button(new Rect(Screen.width / 2 - 50, 350, 100, 40), "Repetir?"))
             SceneManager.LoadScene("Main");
     }
 }
