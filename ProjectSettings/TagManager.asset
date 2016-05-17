@@ -11,6 +11,7 @@ TagManager:
   - BackGroundRepeat
   - Enemy
   - Fire
+  - POW
   layers:
   - Default
   - TransparentFX

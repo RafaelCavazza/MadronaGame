@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class WoodenBarrel : MonoBehaviour {
+public class WoodenBarrel : MonoBehaviour
+{
+    public bool ItHasPlayer { get; set; }
 
     public float Rotation = 3;
     public float DownSpeed = 0.00f;
@@ -10,49 +11,38 @@ public class WoodenBarrel : MonoBehaviour {
 
     private Vector2 StartedPosition;
 
-    public  bool   MoveXAxis;
-    public  float  MoveXAxisValue;
-    public  float  MoveXAxisSpeed;
-    public  bool   MoveXAxisLeftToRigth;
-    public  bool   MoveXAxisCentered;
+    public bool MoveXAxis;
+    public float MoveXAxisValue;
+    public float MoveXAxisSpeed;
+    public bool MoveXAxisLeftToRigth;
+    public bool MoveXAxisCentered;
 
-    public bool  MoveYAxis;
+    public bool MoveYAxis;
     public float MoveYAxisValue;
     public float MoveYAxisSpeed;
-    public bool  MoveYAxisDownToUp;
-    public bool  MoveYAxisCentered;
+    public bool MoveYAxisDownToUp;
+    public bool MoveYAxisCentered;
 
-    public bool random = false;
-   
-	void Start ()
-	{
-	    StartedPosition = new Vector2(transform.position.x, transform.position.y);
-        System.Random rand = new System.Random();
-        if (random)
-        {
-            int value = rand.Next(-2, 2);
-            if (value < 0)
-                RotationDirection = -1;
-            else
-                RotationDirection = 1;
-            Rotation = rand.Next(1, 8);
-            DownSpeed = ((float)(rand.Next(8, 30)))/100;
-        }
+    void Start()
+    {
+        StartedPosition = new Vector2(transform.position.x, transform.position.y);
+        ItHasPlayer = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if(Rotation!=0)
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Rotation != 0)
             transform.Rotate(0, 0, (Rotation * RotationDirection));
         MoveBarrel();
 
-	    MoveXAxisFunc();
+        MoveXAxisFunc();
         MoveYAxisFunc();
-	}
+    }
 
     void MoveBarrel()
     {
-        if(DownSpeed!=0)
+        if (DownSpeed != 0)
             this.transform.position = new Vector2(transform.position.x, transform.position.y - DownSpeed);
     }
 
@@ -94,7 +84,7 @@ public class WoodenBarrel : MonoBehaviour {
             }
         }
 
-        transform.position = new Vector2(transform.position.x, transform.position.y+ addPosition);
+        transform.position = new Vector2(transform.position.x, transform.position.y + addPosition);
     }
 
     void MoveXAxisFunc()
@@ -105,7 +95,7 @@ public class WoodenBarrel : MonoBehaviour {
         var addPosition = (MoveXAxisSpeed * MoveXAxisValue); //Posição a Ser Adicionada no Elemento
 
         if (!MoveXAxisLeftToRigth) //se estiver movendo da esquerda para direira
-            addPosition = addPosition*-1;
+            addPosition = addPosition * -1;
 
         if (MoveXAxisLeftToRigth) //Se está Movendo da esquerda par direita
         {
@@ -124,15 +114,15 @@ public class WoodenBarrel : MonoBehaviour {
             }
         }
 
-        transform.position = new Vector2(transform.position.x + addPosition, transform.position.y); 
+        transform.position = new Vector2(transform.position.x + addPosition, transform.position.y);
     }
 
     float MoveXAxisLimitValue()
     {
         if (MoveXAxisCentered)
         {
-            if(MoveXAxisLeftToRigth)
-                return StartedPosition.x + (MoveXAxisValue/2);
+            if (MoveXAxisLeftToRigth)
+                return StartedPosition.x + (MoveXAxisValue / 2);
             return StartedPosition.x - (MoveXAxisValue / 2);
         }
         else

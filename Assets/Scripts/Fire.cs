@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class Fire : MonoBehaviour
@@ -7,12 +6,6 @@ public class Fire : MonoBehaviour
 
     public float UpForce = 0.08F;
     public PlayerController player;
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -27,7 +20,11 @@ public class Fire : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         else if (other.tag.Equals("Barrel"))
         {
-            Destroy(other.gameObject);
+            WoodenBarrel barril = other.GetComponent<WoodenBarrel>();
+            if (barril.ItHasPlayer)
+                SceneManager.LoadScene("GameOver");
+            else
+                Destroy(other.gameObject);
         }
     }
 }
