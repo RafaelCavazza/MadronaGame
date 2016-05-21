@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     private WoodenBarrel Barrel;
     private BoxCollider2D BarrelBoxColider;
     private CircleCollider2D PlayerColider;
+    public AudioSource PowSound;
+    public AudioSource JumpSound;
 
     void Start()
     {
@@ -35,6 +38,10 @@ public class PlayerController : MonoBehaviour
             BarrelBoxColider = colliderObject.gameObject.GetComponent<BoxCollider2D>();
             PlayerColider.enabled = false;
             Barrel = colliderObject.gameObject.GetComponent<WoodenBarrel>();
+
+            if(Barrel.X)
+                SceneManager.LoadScene("GameOver");
+
             Barrel.ItHasPlayer = true;
             MyRigidbody.velocity = new Vector2(0, 0);
             DisableGravity();
@@ -84,6 +91,11 @@ public class PlayerController : MonoBehaviour
 
         this.transform.position = new Vector2((float)startX, (float)startY);
         MyRigidbody.velocity = new Vector2((float)sin, (float)cos) * jumpForce;
+
+        if (!Pow)
+            PowSound.Play();
+        else
+            JumpSound.Play();
 
         Barrel.ItHasPlayer = false;
         PlayerColider.enabled = true;

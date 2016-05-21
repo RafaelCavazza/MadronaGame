@@ -26,5 +26,7 @@ public class Fire : MonoBehaviour
             else
                 Destroy(other.gameObject);
         }
+        else if (!other.tag.Contains("Background"))
+            Destroy(other.gameObject);
     }
 }

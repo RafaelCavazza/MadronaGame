@@ -4,6 +4,7 @@ public class WoodenBarrel : MonoBehaviour
 {
     public bool ItHasPlayer { get; set; }
 
+    public bool X;
     public float Rotation = 3;
     public float DownSpeed = 0.00f;
     public float RotationDirection = 1;

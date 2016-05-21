@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class ButtonScript : MonoBehaviour {
-
-    private void OnTriggerEnter2D(Collider2D other)
+public class ButtonScript : MonoBehaviour
+{
+    public void ChangeScene(string scene)
     {
-        if (other.tag.Equals("Player"))
-            SceneManager.LoadScene("StageComplete");
+        SceneManager.LoadScene(scene);
     }
 }
