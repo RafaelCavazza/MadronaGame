@@ -1,16 +1,21 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class WoodenBarrel : MonoBehaviour
 {
     public bool ItHasPlayer { get; set; }
 
     public bool X;
+    public bool Rotate = false;
     public float Rotation = 3;
-    public float DownSpeed = 0.00f;
-    public float RotationDirection = 1;
+    public int RotationDirection = 1;
+    public float RotationAngle = 120;
     public float ExitSpeed = 30;
+    public bool ContinuousRotation = false;
 
+    private float RotatedValue;
     private Vector2 StartedPosition;
+    private Vector3 StartedEulerAngles;
 
     public bool MoveXAxis;
     public float MoveXAxisValue;
@@ -26,31 +31,58 @@ public class WoodenBarrel : MonoBehaviour
 
     void Start()
     {
-        StartedPosition = new Vector2(transform.position.x, transform.position.y);
+        StartedPosition = transform.position;
+        StartedEulerAngles = transform.rotation.eulerAngles;
         ItHasPlayer = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Rotation != 0)
-            transform.Rotate(0, 0, (Rotation * RotationDirection));
-        MoveBarrel();
-
         MoveXAxisFunc();
         MoveYAxisFunc();
+        RotateBarrel();
     }
 
-    void MoveBarrel()
+    void RotateBarrel()
     {
-        if (DownSpeed != 0)
-            this.transform.position = new Vector2(transform.position.x, transform.position.y - DownSpeed);
+        if (!Rotate)
+            return;
+
+        var rotateValue = Rotation * RotationDirection;
+
+        if (ContinuousRotation)
+        {
+            transform.Rotate(new Vector3(0, 0, rotateValue));
+            return;
+        }
+
+        if (RotationDirection != -1)
+        {
+            if (Math.Abs(RotatedValue - RotationAngle) < 0.1)
+            {
+                RotatedValue = 0;
+                rotateValue = 0;
+                RotationDirection = -1;
+            }
+        }
+        else
+        {
+            if (Math.Abs(RotatedValue - RotationAngle) < 0.1)
+            {
+                RotatedValue = 0;
+                rotateValue = 0;
+                RotationDirection = 1;
+            }
+        }
+        RotatedValue += (rotateValue < 0 ? rotateValue*-1 : rotateValue);
+        var rotation = new Vector3(0,0,rotateValue);
+        transform.Rotate(rotation);
     }
 
     void StopRotation()
     {
         Rotation = 0;
-        DownSpeed = 0;
     }
 
     void Dispose()
