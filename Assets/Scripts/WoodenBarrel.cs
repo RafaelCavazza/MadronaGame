@@ -19,7 +19,7 @@ public class WoodenBarrel : MonoBehaviour
     private Vector2 StartedPosition;
 
     public bool MoveXAxis;
-    public float MoveXAxisValue;
+    public float MoveXAxisValue; 
     public float MoveXAxisSpeed;
     public bool MoveXAxisLeftToRigth;
     public bool MoveXAxisCentered;

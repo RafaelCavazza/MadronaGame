@@ -8,7 +8,7 @@ public class TextMesh : MonoBehaviour {
         var textMesh =  this.GetComponent<MeshRenderer>();
         textMesh.sortingLayerName = "Player";
         textMesh.sortingOrder = 1;
-	}
+	} 
 	
 	// Update is called once per frame
 	void Update () {

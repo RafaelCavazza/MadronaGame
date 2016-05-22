@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
 
-    public string SceneToLoad = "";
+    public string SceneToLoad = ""; 
     private bool _loaded;
 
     void OnMouseUp()

@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         this.MyRigidbody = GetComponent<Rigidbody2D>();
         this.PlayerColider = GetComponent<CircleCollider2D>();
     }
-
+     
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && isInBarrel)

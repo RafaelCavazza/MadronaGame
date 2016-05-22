@@ -62,7 +62,7 @@ public class LevelMenu : MonoBehaviour
             var textMesh = newLevel.GetComponentInChildren<UnityEngine.TextMesh>();
             textMesh.text = level.SceneId.ToString();
             left = !left;
-            y += 30;
+            y += 30; 
         }
     }
 
