@@ -9,7 +9,7 @@ public class WoodenBarrel : MonoBehaviour
     public float Rotation = 3;
     public int RotationDirection = 1;
     public float RotationAngle = 120;
-    public float ExitSpeed = 30;
+    public float ExitSpeed = 80;
     public bool ContinuousRotation = false;
 
     public bool RotatePlayer = true;
@@ -17,7 +17,6 @@ public class WoodenBarrel : MonoBehaviour
 
     private float RotatedValue;
     private Vector2 StartedPosition;
-    private Vector3 StartedEulerAngles;
 
     public bool MoveXAxis;
     public float MoveXAxisValue;
@@ -34,7 +33,6 @@ public class WoodenBarrel : MonoBehaviour
     void Start()
     {
         StartedPosition = transform.position;
-        StartedEulerAngles = transform.rotation.eulerAngles;
         ItHasPlayer = false;
     }
 

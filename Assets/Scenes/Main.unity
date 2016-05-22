@@ -179,8 +179,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 180
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 1
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -433,8 +435,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 180
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 0
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -534,8 +538,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 120
-  ExitSpeed: 30
-  ContinuousRotation: 1
+  ExitSpeed: 80
+  ContinuousRotation: 0
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -864,8 +870,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: -1
   RotationAngle: 180
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 0
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -1054,14 +1062,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotation: 0
+  Rotation: 2
   RotationDirection: 1
   RotationAngle: 120
-  ExitSpeed: 30
+  ExitSpeed: 120
   ContinuousRotation: 0
-  MoveXAxis: 0
-  MoveXAxisValue: 0
-  MoveXAxisSpeed: 0
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
+  MoveXAxis: 1
+  MoveXAxisValue: 35
+  MoveXAxisSpeed: 0.025
   MoveXAxisLeftToRigth: 1
   MoveXAxisCentered: 1
   MoveYAxis: 0
@@ -1120,7 +1130,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 617773232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: -10, z: 0}
+  m_LocalPosition: {x: 10.2, y: -10.5, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1158,8 +1168,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 180
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 1
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -1345,8 +1357,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 180
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 0
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -1446,8 +1460,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 180
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 1
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -1843,8 +1859,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: -1
   RotationAngle: 180
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 0
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -2078,8 +2096,10 @@ MonoBehaviour:
   Rotation: 0
   RotationDirection: 1
   RotationAngle: 120
-  ExitSpeed: 30
+  ExitSpeed: 100
   ContinuousRotation: 0
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -2179,8 +2199,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: -1
   RotationAngle: 180
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 0
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -2353,8 +2375,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 180
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 0
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -2588,8 +2612,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 180
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 0
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -2781,8 +2807,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 180
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 1
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -3672,8 +3700,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: -1
   RotationAngle: 180
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 0
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 10
   MoveXAxisSpeed: 0.05
@@ -3773,8 +3803,10 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 360
-  ExitSpeed: 30
+  ExitSpeed: 80
   ContinuousRotation: 1
+  RotatePlayer: 1
+  RotatePlayerSpeed: 2
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0

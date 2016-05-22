@@ -454,7 +454,7 @@ GameObject:
   - 212: {fileID: 1277314395}
   - 95: {fileID: 1277314394}
   m_Layer: 0
-  m_Name: spritFire2_0 (1)
+  m_Name: spritFire2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -604,7 +604,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Main
+          m_StringArgument: LevelMenu
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -664,7 +664,7 @@ GameObject:
   - 212: {fileID: 1745413582}
   - 95: {fileID: 1745413581}
   m_Layer: 0
-  m_Name: spritFire2_0 (2)
+  m_Name: spritFire2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
