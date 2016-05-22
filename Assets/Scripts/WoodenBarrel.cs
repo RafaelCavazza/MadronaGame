@@ -12,6 +12,9 @@ public class WoodenBarrel : MonoBehaviour
     public float ExitSpeed = 30;
     public bool ContinuousRotation = false;
 
+    public bool RotatePlayer = true;
+    public float RotatePlayerSpeed = 2f;
+
     private float RotatedValue;
     private Vector2 StartedPosition;
     private Vector3 StartedEulerAngles;

@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     public AudioSource PowSound;
     public AudioSource JumpSound;
 
+    private bool  BarrelRotatePlayer = false;
+    private float BarrelRotatePlayerSpeed = 0;
+
     void Start()
     {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
@@ -29,6 +32,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && isInBarrel)
             ExitBarel();
+    }
+
+    void RotatePlayer()
+    {
+        if (!BarrelRotatePlayer)
+            return;
+        transform.Rotate(0, 0, BarrelRotatePlayerSpeed);
     }
 
     void OnCollisionEnter2D(Collision2D colliderObject)
@@ -90,8 +100,11 @@ public class PlayerController : MonoBehaviour
         var startY = (((PlayerColider.radius) * transform.lossyScale.y) * cos * 1.1f) + (((BarrelBoxColider.size.y / 2) * Barrel.transform.lossyScale.y) * cos) + BarrelBoxColider.transform.position.y;
 
         this.transform.position = new Vector2((float)startX, (float)startY);
-        MyRigidbody.velocity = new Vector2((float)sin, (float)cos) * jumpForce;
 
+        MyRigidbody.velocity = new Vector2((float)sin, (float)cos) * Barrel.ExitSpeed;
+
+        BarrelRotatePlayer = Barrel.RotatePlayer;
+        BarrelRotatePlayerSpeed = Barrel.RotatePlayerSpeed;
         if (!Pow)
             PowSound.Play();
         else
