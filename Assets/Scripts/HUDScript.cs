@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
 public class HUDScript : MonoBehaviour
 {
 
     float playerScrore;
+    public Text text;
 
     // Use this for initialization
     void Start()
@@ -16,6 +17,7 @@ public class HUDScript : MonoBehaviour
     void Update()
     {
         playerScrore -= Time.deltaTime;
+        text.text = "SCORE: " + (int)playerScrore;
     }
 
     void OnDisable()
@@ -23,8 +25,4 @@ public class HUDScript : MonoBehaviour
         PlayerPrefs.SetInt("Score", (int)playerScrore);
     }
 
-    void OnGUI()
-    {
-        GUI.Label(new Rect(10, 10, 100, 30), "Score: " + (int)playerScrore);
-    }
 }
