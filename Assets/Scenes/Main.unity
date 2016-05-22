@@ -435,7 +435,7 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 180
-  ExitSpeed: 80
+  ExitSpeed: 120
   ContinuousRotation: 0
   RotatePlayer: 1
   RotatePlayerSpeed: 2
@@ -2199,7 +2199,7 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: -1
   RotationAngle: 180
-  ExitSpeed: 80
+  ExitSpeed: 120
   ContinuousRotation: 0
   RotatePlayer: 1
   RotatePlayerSpeed: 2
@@ -2375,7 +2375,7 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 180
-  ExitSpeed: 80
+  ExitSpeed: 120
   ContinuousRotation: 0
   RotatePlayer: 1
   RotatePlayerSpeed: 2
@@ -3803,7 +3803,7 @@ MonoBehaviour:
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 360
-  ExitSpeed: 80
+  ExitSpeed: 120
   ContinuousRotation: 1
   RotatePlayer: 1
   RotatePlayerSpeed: 2
