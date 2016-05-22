@@ -6,7 +6,6 @@ public class WoodenBarrel : MonoBehaviour
     public bool ItHasPlayer { get; set; }
 
     public bool X;
-    public bool Rotate = false;
     public float Rotation = 3;
     public int RotationDirection = 1;
     public float RotationAngle = 120;
@@ -46,9 +45,6 @@ public class WoodenBarrel : MonoBehaviour
 
     void RotateBarrel()
     {
-        if (!Rotate)
-            return;
-
         var rotateValue = Rotation * RotationDirection;
 
         if (ContinuousRotation)
@@ -75,8 +71,8 @@ public class WoodenBarrel : MonoBehaviour
                 RotationDirection = 1;
             }
         }
-        RotatedValue += (rotateValue < 0 ? rotateValue*-1 : rotateValue);
-        var rotation = new Vector3(0,0,rotateValue);
+        RotatedValue += (rotateValue < 0 ? rotateValue * -1 : rotateValue);
+        var rotation = new Vector3(0, 0, rotateValue);
         transform.Rotate(rotation);
     }
 

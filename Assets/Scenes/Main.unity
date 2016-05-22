@@ -176,12 +176,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 3
   RotationDirection: 1
-  RotationAngle: 120
+  RotationAngle: 180
   ExitSpeed: 30
-  ContinuousRotation: 0
+  ContinuousRotation: 1
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -431,10 +430,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 3
   RotationDirection: 1
-  RotationAngle: 120
+  RotationAngle: 180
   ExitSpeed: 30
   ContinuousRotation: 0
   MoveXAxis: 0
@@ -533,12 +531,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 1
-  Rotate: 0
   Rotation: 3
   RotationDirection: 1
   RotationAngle: 120
   ExitSpeed: 30
-  ContinuousRotation: 0
+  ContinuousRotation: 1
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -864,10 +861,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 3
-  RotationDirection: 1
-  RotationAngle: 120
+  RotationDirection: -1
+  RotationAngle: 180
   ExitSpeed: 30
   ContinuousRotation: 0
   MoveXAxis: 0
@@ -1058,8 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
-  Rotation: 3
+  Rotation: 0
   RotationDirection: 1
   RotationAngle: 120
   ExitSpeed: 30
@@ -1160,12 +1155,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 3
   RotationDirection: 1
-  RotationAngle: 120
+  RotationAngle: 180
   ExitSpeed: 30
-  ContinuousRotation: 0
+  ContinuousRotation: 1
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -1262,10 +1256,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 3
   RotationDirection: 1
-  RotationAngle: 120
+  RotationAngle: 180
   ExitSpeed: 30
   ContinuousRotation: 0
   MoveXAxis: 0
@@ -1364,12 +1357,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 3
   RotationDirection: 1
-  RotationAngle: 120
+  RotationAngle: 180
   ExitSpeed: 30
-  ContinuousRotation: 0
+  ContinuousRotation: 1
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -1774,10 +1766,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 3
-  RotationDirection: 1
-  RotationAngle: 120
+  RotationDirection: -1
+  RotationAngle: 180
   ExitSpeed: 30
   ContinuousRotation: 0
   MoveXAxis: 0
@@ -2010,7 +2001,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 0
   RotationDirection: 1
   RotationAngle: 120
@@ -2112,10 +2102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 3
-  RotationDirection: 1
-  RotationAngle: 120
+  RotationDirection: -1
+  RotationAngle: 180
   ExitSpeed: 30
   ContinuousRotation: 0
   MoveXAxis: 0
@@ -2287,10 +2276,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 3
   RotationDirection: 1
-  RotationAngle: 120
+  RotationAngle: 180
   ExitSpeed: 30
   ContinuousRotation: 0
   MoveXAxis: 0
@@ -2523,10 +2511,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 3
   RotationDirection: 1
-  RotationAngle: 120
+  RotationAngle: 180
   ExitSpeed: 30
   ContinuousRotation: 0
   MoveXAxis: 0
@@ -2625,12 +2612,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 3
   RotationDirection: 1
-  RotationAngle: 120
+  RotationAngle: 180
   ExitSpeed: 30
-  ContinuousRotation: 0
+  ContinuousRotation: 1
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
@@ -3456,9 +3442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 1
   Rotation: 3
-  RotationDirection: 1
+  RotationDirection: -1
   RotationAngle: 180
   ExitSpeed: 30
   ContinuousRotation: 0
@@ -3558,12 +3543,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotate: 0
   Rotation: 3
   RotationDirection: 1
-  RotationAngle: 120
+  RotationAngle: 360
   ExitSpeed: 30
-  ContinuousRotation: 0
+  ContinuousRotation: 1
   MoveXAxis: 0
   MoveXAxisValue: 0
   MoveXAxisSpeed: 0
