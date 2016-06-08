@@ -5,6 +5,9 @@ public class ButtonScript : MonoBehaviour
 {
     public void ChangeScene(string scene)
     {
-        SceneManager.LoadScene(scene);
+        if (string.IsNullOrEmpty(scene))
+            SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
+        else
+            SceneManager.LoadScene(scene);
     }
 }

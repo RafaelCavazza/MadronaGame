@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HUDScript : MonoBehaviour
@@ -23,6 +24,7 @@ public class HUDScript : MonoBehaviour
     void OnDisable()
     {
         PlayerPrefs.SetInt("Score", (int)playerScrore);
+        PlayerPrefs.SetString("Level", SceneManager.GetActiveScene().name);
     }
 
 }
