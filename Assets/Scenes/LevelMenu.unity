@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f69372c7470424fb426ccf7b6be705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _camera: {fileID: 744507534}
   LevelSprite: {fileID: 1357602326}
 --- !u!212 &397585295
 SpriteRenderer:
