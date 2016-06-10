@@ -19,7 +19,7 @@ public class WoodenBarrel : MonoBehaviour
     private Vector2 StartedPosition;
 
     public bool MoveXAxis;
-    public float MoveXAxisValue; 
+    public float MoveXAxisValue;
     public float MoveXAxisSpeed;
     public bool MoveXAxisLeftToRigth;
     public bool MoveXAxisCentered;
@@ -39,9 +39,12 @@ public class WoodenBarrel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveXAxisFunc();
-        MoveYAxisFunc();
-        RotateBarrel();
+        if (!Pause.paused)
+        {
+            MoveXAxisFunc();
+            MoveYAxisFunc();
+            RotateBarrel();
+        }
     }
 
     void RotateBarrel()
@@ -89,62 +92,62 @@ public class WoodenBarrel : MonoBehaviour
 
     void MoveYAxisFunc()
     {
-        if (!MoveYAxis)
-            return;
-
-        var addPosition = (MoveYAxisSpeed * MoveYAxisValue); //Posição a Ser Adicionada no Elemento
-
-        if (!MoveYAxisDownToUp) //se estiver movendo da esquerda para direira
-            addPosition = addPosition * -1;
-
-        if (MoveYAxisDownToUp) //Se está Movendo da esquerda par direita
+        if (MoveYAxis)
         {
-            addPosition = ((addPosition + transform.position.y) > MoveYAxisLimitValue()) ? MoveYAxisLimitValue() - transform.position.y : addPosition;
-            if (((addPosition + transform.position.y) >= MoveYAxisLimitValue()))
-            {
-                MoveYAxisDownToUp = false;
-            }
-        }
-        else
-        {
-            addPosition = ((addPosition + transform.position.y) < MoveYAxisLimitValue()) ? MoveYAxisLimitValue() - transform.position.y : addPosition;
-            if ((addPosition + transform.position.y) <= MoveYAxisLimitValue())
-            {
-                MoveYAxisDownToUp = true;
-            }
-        }
+            var addPosition = (MoveYAxisSpeed * MoveYAxisValue); //Posição a Ser Adicionada no Elemento
 
-        transform.position = new Vector2(transform.position.x, transform.position.y + addPosition);
+            if (!MoveYAxisDownToUp) //se estiver movendo da esquerda para direira
+                addPosition = addPosition * -1;
+
+            if (MoveYAxisDownToUp) //Se está Movendo da esquerda par direita
+            {
+                addPosition = ((addPosition + transform.position.y) > MoveYAxisLimitValue()) ? MoveYAxisLimitValue() - transform.position.y : addPosition;
+                if (((addPosition + transform.position.y) >= MoveYAxisLimitValue()))
+                {
+                    MoveYAxisDownToUp = false;
+                }
+            }
+            else
+            {
+                addPosition = ((addPosition + transform.position.y) < MoveYAxisLimitValue()) ? MoveYAxisLimitValue() - transform.position.y : addPosition;
+                if ((addPosition + transform.position.y) <= MoveYAxisLimitValue())
+                {
+                    MoveYAxisDownToUp = true;
+                }
+            }
+
+            transform.position = new Vector2(transform.position.x, transform.position.y + addPosition);
+        }
     }
 
     void MoveXAxisFunc()
     {
-        if (!MoveXAxis)
-            return;
-
-        var addPosition = (MoveXAxisSpeed * MoveXAxisValue); //Posição a Ser Adicionada no Elemento
-
-        if (!MoveXAxisLeftToRigth) //se estiver movendo da esquerda para direira
-            addPosition = addPosition * -1;
-
-        if (MoveXAxisLeftToRigth) //Se está Movendo da esquerda par direita
+        if (MoveXAxis)
         {
-            addPosition = ((addPosition + transform.position.x) > MoveXAxisLimitValue()) ? MoveXAxisLimitValue() - transform.position.x : addPosition;
-            if (((addPosition + transform.position.x) >= MoveXAxisLimitValue()))
-            {
-                MoveXAxisLeftToRigth = false;
-            }
-        }
-        else
-        {
-            addPosition = ((addPosition + transform.position.x) < MoveXAxisLimitValue()) ? MoveXAxisLimitValue() - transform.position.x : addPosition;
-            if ((addPosition + transform.position.x) <= MoveXAxisLimitValue())
-            {
-                MoveXAxisLeftToRigth = true;
-            }
-        }
+            var addPosition = (MoveXAxisSpeed * MoveXAxisValue); //Posição a Ser Adicionada no Elemento
 
-        transform.position = new Vector2(transform.position.x + addPosition, transform.position.y);
+            if (!MoveXAxisLeftToRigth) //se estiver movendo da esquerda para direira
+                addPosition = addPosition * -1;
+
+            if (MoveXAxisLeftToRigth) //Se está Movendo da esquerda par direita
+            {
+                addPosition = ((addPosition + transform.position.x) > MoveXAxisLimitValue()) ? MoveXAxisLimitValue() - transform.position.x : addPosition;
+                if (((addPosition + transform.position.x) >= MoveXAxisLimitValue()))
+                {
+                    MoveXAxisLeftToRigth = false;
+                }
+            }
+            else
+            {
+                addPosition = ((addPosition + transform.position.x) < MoveXAxisLimitValue()) ? MoveXAxisLimitValue() - transform.position.x : addPosition;
+                if ((addPosition + transform.position.x) <= MoveXAxisLimitValue())
+                {
+                    MoveXAxisLeftToRigth = true;
+                }
+            }
+
+            transform.position = new Vector2(transform.position.x + addPosition, transform.position.y);
+        }
     }
 
     float MoveXAxisLimitValue()

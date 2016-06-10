@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-
     public float speed;
     public float jumpForce;
 
@@ -18,29 +17,30 @@ public class PlayerController : MonoBehaviour
     public AudioSource PowSound;
     public AudioSource JumpSound;
 
-    private bool  BarrelRotatePlayer = false;
+    private bool BarrelRotatePlayer = false;
     private float BarrelRotatePlayerSpeed = 0;
 
     void Start()
     {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
-        this.MyRigidbody = GetComponent<Rigidbody2D>();
-        this.PlayerColider = GetComponent<CircleCollider2D>();
+        MyRigidbody = GetComponent<Rigidbody2D>();
+        PlayerColider = GetComponent<CircleCollider2D>();
     }
-     
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isInBarrel)
-            ExitBarel();
-
-        RotatePlayer();
+        if (!Pause.paused)
+        {
+            RotatePlayer();
+            if (Input.GetMouseButtonDown(0) && isInBarrel)
+                ExitBarel();
+        }
     }
 
     void RotatePlayer()
     {
-        if (!BarrelRotatePlayer)
-            return;
-        transform.Rotate(0, 0, BarrelRotatePlayerSpeed);
+        if (BarrelRotatePlayer)
+            transform.Rotate(0, 0, BarrelRotatePlayerSpeed);
     }
 
     void OnCollisionEnter2D(Collision2D colliderObject)
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
             PlayerColider.enabled = false;
             Barrel = colliderObject.gameObject.GetComponent<WoodenBarrel>();
 
-            if(Barrel.X)
+            if (Barrel.X)
                 SceneManager.LoadScene("GameOver");
 
             Barrel.ItHasPlayer = true;

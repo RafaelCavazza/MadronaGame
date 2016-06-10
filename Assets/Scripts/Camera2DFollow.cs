@@ -22,49 +22,49 @@ namespace UnityStandardAssets._2D
         // Use this for initialization
         private void Start()
         {
-            if (target == null)
-                return;
-
-            m_LastTargetPosition = target.position;
-            m_OffsetZ = (transform.position - target.position).z;
-            transform.parent = null;
+            if (target != null)
+            {
+                m_LastTargetPosition = target.position;
+                m_OffsetZ = (transform.position - target.position).z;
+                transform.parent = null;
+            }
         }
 
         // Update is called once per frame
         private void Update()
         {
-            if (target == null)
-                return;
-
-            // only update lookahead pos if accelerating or changed direction
-            float xMoveDelta = (target.position - m_LastTargetPosition).x;
-
-            bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;
-
-            if (updateLookAheadTarget)
-                m_LookAheadPos = lookAheadFactor * Vector3.right * Mathf.Sign(xMoveDelta);
-            else
-                m_LookAheadPos = Vector3.MoveTowards(m_LookAheadPos, Vector3.zero, Time.deltaTime * lookAheadReturnSpeed);
-
-            Vector3 aheadTargetPos = target.position + m_LookAheadPos + Vector3.forward * m_OffsetZ;
-            Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
-
-            newPos.x = transform.position.x;
-            CreatNewBackGround();
-            if (OnlyUpCamera)
+            if (target != null)
             {
-                if (newPos.y > transform.position.y)
+                // only update lookahead pos if accelerating or changed direction
+                float xMoveDelta = (target.position - m_LastTargetPosition).x;
+
+                bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;
+
+                if (updateLookAheadTarget)
+                    m_LookAheadPos = lookAheadFactor * Vector3.right * Mathf.Sign(xMoveDelta);
+                else
+                    m_LookAheadPos = Vector3.MoveTowards(m_LookAheadPos, Vector3.zero, Time.deltaTime * lookAheadReturnSpeed);
+
+                Vector3 aheadTargetPos = target.position + m_LookAheadPos + Vector3.forward * m_OffsetZ;
+                Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
+
+                newPos.x = transform.position.x;
+                CreatNewBackGround();
+                if (OnlyUpCamera)
+                {
+                    if (newPos.y > transform.position.y)
+                    {
+                        SetWallHeigth(newPos.y - transform.position.y);
+                        transform.position = newPos;
+                        m_LastTargetPosition = target.position;
+                    }
+                }
+                else
                 {
                     SetWallHeigth(newPos.y - transform.position.y);
                     transform.position = newPos;
                     m_LastTargetPosition = target.position;
                 }
-            }
-            else
-            {
-                SetWallHeigth(newPos.y - transform.position.y);
-                transform.position = newPos;
-                m_LastTargetPosition = target.position;
             }
         }
 
@@ -77,9 +77,7 @@ namespace UnityStandardAssets._2D
                 foreach (var col in coliders)
                 {
                     if (col.isTrigger == false)
-                    {
                         col.size = new Vector2(col.size.x, col.size.y + (size * 2));
-                    }
                 }
             }
         }
@@ -89,19 +87,19 @@ namespace UnityStandardAssets._2D
         /// </summary>
         void CreatNewBackGround()
         {
-            if (LastBackgound == null)
-                return;
-
-            if (isMaxHeight())
+            if (LastBackgound != null)
             {
-                var new_LastBackgound = GameObject.Instantiate(LastBackgound);
-                var transform = new_LastBackgound.GetComponent<Transform>();
-                var sprite = new_LastBackgound.GetComponent<SpriteRenderer>();
+                if (isMaxHeight())
+                {
+                    var new_LastBackgound = GameObject.Instantiate(LastBackgound);
+                    var transform = new_LastBackgound.GetComponent<Transform>();
+                    var sprite = new_LastBackgound.GetComponent<SpriteRenderer>();
 
-                transform.position = new Vector2(transform.position.x, transform.position.y + (sprite.bounds.extents.y * 2));
+                    transform.position = new Vector2(transform.position.x, transform.position.y + (sprite.bounds.extents.y * 2));
 
-                new_LastBackgound.name = SetNameNewBackGround();
-                this.LastBackgound = new_LastBackgound;
+                    new_LastBackgound.name = SetNameNewBackGround();
+                    LastBackgound = new_LastBackgound;
+                }
             }
         }
 
@@ -111,10 +109,10 @@ namespace UnityStandardAssets._2D
         /// <returns></returns>
         private string SetNameNewBackGround()
         {
-             var numberStr = LastBackgound.name.Split('_')[1];
-             int number = int.Parse(numberStr) + 1;
-             string new_name = "BackGroundSky_" + number.ToString();
-             return new_name;
+            var numberStr = LastBackgound.name.Split('_')[1];
+            int number = int.Parse(numberStr) + 1;
+            string new_name = "BackGroundSky_" + number.ToString();
+            return new_name;
         }
 
         /// <summary>

@@ -3,14 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class Fire : MonoBehaviour
 {
-
+    public static bool isStoped;
     public float UpForce = 0.08F;
     public PlayerController player;
 
     // Update is called once per frame
     void Update()
     {
-        if (player.Pow)
+        if (player.Pow && !Pause.paused)
             transform.position += Vector3.up * UpForce;
     }
 
