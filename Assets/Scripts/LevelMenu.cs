@@ -8,7 +8,7 @@ using System.IO;
 public class LevelMenu : MonoBehaviour
 {
 
-    public Camera _camera;    
+    public Camera _camera;
     public GameObject LevelSprite;
 
     public static GameData GameData { get; set; }
@@ -22,15 +22,15 @@ public class LevelMenu : MonoBehaviour
     Vector2 currentSwipe;
 
     // Use this for initialization
-    void Start ()
-	{
+    void Start()
+    {
         GameData = GetGameData();
         LoadLevels();
         if (_camera != null)
         {
             MinHeigth = _camera.transform.position.y;
         }
-	}
+    }
 
     void Update()
     {
@@ -69,15 +69,15 @@ public class LevelMenu : MonoBehaviour
     private GameData SetLevelValue()
     {
         var levels = new List<LevelInfo>();
-        levels.Add(new LevelInfo { SceneName =  "Main",   SceneId = 1, SceneScore = 0});
-        levels.Add(new LevelInfo { SceneName = "Level2",  SceneId = 2, SceneScore = 0 });
-        levels.Add(new LevelInfo { SceneName = "Level3",  SceneId = 3, SceneScore = 0 });
-        levels.Add(new LevelInfo { SceneName = "Level4",  SceneId = 4, SceneScore = 0 });
-        levels.Add(new LevelInfo { SceneName = "Level5",  SceneId = 5, SceneScore = 0 });
-        levels.Add(new LevelInfo { SceneName = "Level6",  SceneId = 6, SceneScore = 0 });
-        levels.Add(new LevelInfo { SceneName = "Level7",  SceneId = 7, SceneScore = 0 });
-        levels.Add(new LevelInfo { SceneName = "Level8",  SceneId = 8, SceneScore = 0 });
-        levels.Add(new LevelInfo { SceneName = "Level9",  SceneId = 9, SceneScore = 0 });
+        levels.Add(new LevelInfo { SceneName = "Level1", SceneId = 1, SceneScore = 0 });
+        levels.Add(new LevelInfo { SceneName = "Level2", SceneId = 2, SceneScore = 0 });
+        levels.Add(new LevelInfo { SceneName = "Level3", SceneId = 3, SceneScore = 0 });
+        levels.Add(new LevelInfo { SceneName = "Level4", SceneId = 4, SceneScore = 0 });
+        levels.Add(new LevelInfo { SceneName = "Level5", SceneId = 5, SceneScore = 0 });
+        levels.Add(new LevelInfo { SceneName = "Level6", SceneId = 6, SceneScore = 0 });
+        levels.Add(new LevelInfo { SceneName = "Level7", SceneId = 7, SceneScore = 0 });
+        levels.Add(new LevelInfo { SceneName = "Level8", SceneId = 8, SceneScore = 0 });
+        levels.Add(new LevelInfo { SceneName = "Level9", SceneId = 9, SceneScore = 0 });
         levels.Add(new LevelInfo { SceneName = "Level10", SceneId = 10, SceneScore = 0 });
 
         GameData = new GameData { LevelInfo = levels.ToArray() };
@@ -121,22 +121,22 @@ public class LevelMenu : MonoBehaviour
             var textMesh = newLevel.GetComponentInChildren<UnityEngine.TextMesh>();
             textMesh.text = level.SceneId.ToString();
             left = !left;
-            y += 30; 
+            y += 30;
         }
         MaxHeigth = y;
     }
 
     private void SetCameraSwipe(float f)
     {
-        throw  new NotImplementedException("Não Implementado");
+        throw new NotImplementedException("Não Implementado");
     }
 
     public float SwipeMouse()
     {
-        if(Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
-            firstPressPos = new Vector2(0,0);
-            secondPressPos = new Vector2(0,0);
+            firstPressPos = new Vector2(0, 0);
+            secondPressPos = new Vector2(0, 0);
             calculated = true;
         }
         if (Input.GetMouseButton(0) && calculated)
@@ -262,7 +262,7 @@ public class LevelInfo
     public string SceneName { get; set; }
     public int SceneId { get; set; }
     public int SceneScore { get; set; }
-    public bool IsInLevel {get;set;}
+    public bool IsInLevel { get; set; }
 }
 
 [Serializable()]
