@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         if (!Pause.paused)
         {
             RotatePlayer();
-            if (Input.GetMouseButtonDown(0) && isInBarrel)
+            if (Input.GetMouseButtonUp(0) && isInBarrel)
                 ExitBarel();
         }
     }

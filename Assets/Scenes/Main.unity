@@ -3262,7 +3262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b206ac33c397d14b9f9523643eaee4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire: {fileID: 1936698193}
+  player: {fileID: 502143246}
 --- !u!1001 &1896401428
 Prefab:
   m_ObjectHideFlags: 0
