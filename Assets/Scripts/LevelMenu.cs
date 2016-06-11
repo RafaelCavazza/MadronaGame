@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TextMesh = UnityEngine.TextMesh;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class LevelMenu : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class LevelMenu : MonoBehaviour
     void Update()
     {
         MoveCamera();
+        if (Input.GetKeyDown(KeyCode.Escape)) { SceneManager.LoadScene("Menu"); }
     }
 
     void MoveCamera()

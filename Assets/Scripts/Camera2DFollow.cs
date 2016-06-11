@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UnityStandardAssets._2D
 {
@@ -66,6 +67,8 @@ namespace UnityStandardAssets._2D
                     m_LastTargetPosition = target.position;
                 }
             }
+
+            if (Input.GetKeyDown(KeyCode.Escape)) { SceneManager.LoadScene("LevelMenu"); }
         }
 
         void SetWallHeigth(float size)
