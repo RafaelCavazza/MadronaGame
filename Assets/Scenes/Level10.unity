@@ -193,6 +193,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &260272832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -449,6 +453,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0.01
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &411900353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -552,6 +560,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &465712833
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -701,6 +713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   jumpForce: 100
+  _camera: {fileID: 0}
   PowSound: {fileID: 2086600531}
   JumpSound: {fileID: 723907924}
 --- !u!50 &502143247
@@ -884,6 +897,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &529303897
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1079,6 +1096,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &617773234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1182,6 +1203,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &649539066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1238,92 +1263,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
---- !u!1 &669622707
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 669622708}
-  - 222: {fileID: 669622710}
-  - 114: {fileID: 669622709}
-  - 114: {fileID: 669622711}
-  m_Layer: 5
-  m_Name: Score
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &669622708
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 669622707}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1521157767}
-  m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -35}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &669622709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 669622707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 1f9a28f88f65f1a479152273d30cdd2a, type: 3}
-    m_FontSize: 24
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'SCORE: 0'
---- !u!222 &669622710
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 669622707}
---- !u!114 &669622711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 669622707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 369e9b1e2dcd93545b24357e19526d73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 669622709}
 --- !u!1 &704354050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,6 +1310,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &704354052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1474,6 +1417,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &721149773
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1873,6 +1820,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &834048685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2110,6 +2061,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 0
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &1034555177
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2213,6 +2168,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &1048137258
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2269,6 +2228,92 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!1 &1171959402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1171959403}
+  - 222: {fileID: 1171959406}
+  - 114: {fileID: 1171959405}
+  - 114: {fileID: 1171959404}
+  m_Layer: 5
+  m_Name: Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1171959403
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171959402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1521157767}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 179.99997, y: -50.00003}
+  m_SizeDelta: {x: 350, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1171959404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171959402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369e9b1e2dcd93545b24357e19526d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1171959405}
+--- !u!114 &1171959405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171959402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 1f9a28f88f65f1a479152273d30cdd2a, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 60
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'SCORE: 0'
+--- !u!222 &1171959406
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171959402}
 --- !u!4 &1181581111 stripped
 Transform:
   m_PrefabParentObject: {fileID: 430120, guid: 7ade275f6cddb8140aa6b646e8a9c8ba, type: 2}
@@ -2389,6 +2434,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &1321859259
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2626,6 +2675,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &1511612759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2766,8 +2819,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 669622708}
   - {fileID: 1892055224}
+  - {fileID: 1171959403}
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_AnchorMin: {x: 0, y: 0}
@@ -2822,6 +2875,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &1535749475
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3160,7 +3217,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1521157767}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 310, y: 590}
@@ -3848,6 +3905,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &2092204185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3951,6 +4012,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &2100309471
 BoxCollider2D:
   m_ObjectHideFlags: 0
