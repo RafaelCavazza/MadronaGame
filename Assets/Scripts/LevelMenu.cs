@@ -19,7 +19,7 @@ public class LevelMenu : MonoBehaviour
     private float MinHeigth = 0;
     private bool calculated = true;
 
-    private double  lastTick;
+    private double lastTick;
     private double currentTick;
 
     Vector2 firstPressPos;
@@ -34,9 +34,7 @@ public class LevelMenu : MonoBehaviour
         GameData = GetGameData();
         LoadLevels();
         if (_camera != null)
-        {
             MinHeigth = _camera.transform.position.y;
-        }
     }
 
     void Update()
@@ -44,7 +42,7 @@ public class LevelMenu : MonoBehaviour
         MoveCamera();
         CreatNewBackGround();
         if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene("Menu"); 
+            SceneManager.LoadScene("Menu");
     }
 
     void MoveCamera()
@@ -52,33 +50,28 @@ public class LevelMenu : MonoBehaviour
         //Logica de Mover a Tela
         //Link do Swipe http://forum.unity3d.com/threads/swipe-in-all-directions-touch-and-mouse.165416/
         currentTick = DateTime.Now.Ticks;
-        if (_camera == null)
-            return;
-        var y = 0f;
-        y += SwipeMouse();
-        y += SwipeTouch();
-
-        if (y == 0f)
-            return;
-
-        var deltaTime = (currentTick - lastTick)/2000000;
-        Debug.Log(deltaTime.ToString());
-
-        y = (float)((y * -1)/deltaTime);
-
-        if (_camera.transform.position.y + y < MinHeigth)
+        if (_camera != null)
         {
-            _camera.transform.position = new Vector3(_camera.transform.position.x, MinHeigth, _camera.transform.position.z);
+            var y = 0f;
+            y += SwipeMouse();
+            y += SwipeTouch();
+
+            if (y != 0f)
+            {
+                var deltaTime = (currentTick - lastTick) / 2000000;
+                Debug.Log(deltaTime.ToString());
+
+                y = (float)((y * -1) / deltaTime);
+
+                if (_camera.transform.position.y + y < MinHeigth)
+                    _camera.transform.position = new Vector3(_camera.transform.position.x, MinHeigth, _camera.transform.position.z);
+                else if (_camera.transform.position.y + y > MaxHeigth)
+                    _camera.transform.position = new Vector3(_camera.transform.position.x, MaxHeigth, _camera.transform.position.z);
+                else
+                    _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y + y, _camera.transform.position.z);
+                lastTick = DateTime.Now.Ticks;
+            }
         }
-        else if (_camera.transform.position.y + y > MaxHeigth)
-        {
-            _camera.transform.position = new Vector3(_camera.transform.position.x, MaxHeigth, _camera.transform.position.z);
-        }
-        else
-        {
-            _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y + y, _camera.transform.position.z);
-        }
-        lastTick = DateTime.Now.Ticks;
     }
 
     /// <summary>
@@ -95,6 +88,7 @@ public class LevelMenu : MonoBehaviour
     public GameData GetGameDataObj()
     {
         var levels = new List<LevelInfo>();
+        levels.Add(new LevelInfo { SceneName = "About", SceneId = 0, SceneScore = 0 });
         levels.Add(new LevelInfo { SceneName = "Level1", SceneId = 1, SceneScore = 0 });
         levels.Add(new LevelInfo { SceneName = "Level2", SceneId = 2, SceneScore = 0 });
         levels.Add(new LevelInfo { SceneName = "Level3", SceneId = 3, SceneScore = 0 });
@@ -111,9 +105,7 @@ public class LevelMenu : MonoBehaviour
     private GameData GetGameData()
     {
         if (string.IsNullOrEmpty(PlayerPrefs.GetString("gameData")))
-        {
             return SetLevelValue();
-        }
         else
         {
             var byteArray = Convert.FromBase64String(PlayerPrefs.GetString("gameData"));
@@ -146,8 +138,8 @@ public class LevelMenu : MonoBehaviour
             newLevel.transform.position = new Vector3(x, y, 0);
             var levelLoader = newLevel.GetComponent<LevelLoader>();
             levelLoader.SceneToLoad = level.SceneName;
-            var textMesh = newLevel.GetComponentInChildren<UnityEngine.TextMesh>();
-            textMesh.text = level.SceneId.ToString();
+            var textMesh = newLevel.GetComponentInChildren<TextMesh>();
+            textMesh.text = level.SceneId > 0 ? level.SceneId.ToString() : "?";
             left = !left;
             y += 30;
         }
@@ -157,7 +149,7 @@ public class LevelMenu : MonoBehaviour
     private void SetMaxHeigth(float y)
     {
         var camHeigth = (_camera.orthographicSize * 2f);
-        MaxHeigth = y-(camHeigth/2);
+        MaxHeigth = y - (camHeigth / 2);
     }
 
     public float SwipeMouse()
@@ -172,7 +164,7 @@ public class LevelMenu : MonoBehaviour
         if (Input.GetMouseButton(0) && calculated)
         {
             //save began touch 2d point
-            firstPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);  
+            firstPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             calculated = false;
         }
 
@@ -191,22 +183,14 @@ public class LevelMenu : MonoBehaviour
             currentSwipe.Normalize();
 
             if (currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
-            {
                 return currentSwipe.y;
-            }
             else if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
-            {
                 return currentSwipe.y;
-            }
             else
-            {
                 return 0;
-            }
         }
         else
-        {
             return 0;
-        }
     }
 
     void CreatNewBackGround()
@@ -215,7 +199,7 @@ public class LevelMenu : MonoBehaviour
         {
             if (isMaxHeight())
             {
-                var new_LastBackgound = GameObject.Instantiate(_lastBackgound);
+                var new_LastBackgound = Instantiate(_lastBackgound);
                 var transform = new_LastBackgound.GetComponent<Transform>();
                 var sprite = new_LastBackgound.GetComponent<SpriteRenderer>();
 
@@ -238,9 +222,7 @@ public class LevelMenu : MonoBehaviour
         foreach (var item in obj)
         {
             if (!memoryVal.LevelInfo.Where(p => p.SceneName == item.SceneName).Any())
-            {
                 return true;
-            }
         }
         return false;
     }
@@ -270,27 +252,17 @@ public class LevelMenu : MonoBehaviour
                 currentSwipe.Normalize();
 
                 if (currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
-                {
                     return currentSwipe.y;
-                }
                 else if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
-                {
                     return currentSwipe.y;
-                }
                 else
-                {
                     return 0;
-                }
             }
             else
-            {
                 return 0;
-            }
         }
         else
-        {
             return 0;
-        }
     }
 
     static void SaveGameData()

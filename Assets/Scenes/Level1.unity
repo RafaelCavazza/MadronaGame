@@ -479,6 +479,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0.01
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &411900353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -628,6 +632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   jumpForce: 100
+  _camera: {fileID: 0}
   PowSound: {fileID: 2086600531}
   JumpSound: {fileID: 723907924}
 --- !u!50 &502143247
@@ -903,6 +908,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &617773234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1436,6 +1445,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 0
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &1034555177
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1539,6 +1552,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &1048137258
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2725,6 +2742,10 @@ MonoBehaviour:
   MoveYAxisSpeed: 0
   MoveYAxisDownToUp: 0
   MoveYAxisCentered: 1
+  StartOnPlayerEnter: 0
+  StopOnPlayerExit: 0
+  playerEntered: 0
+  playerExited: 0
 --- !u!61 &2092204185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2845,7 +2866,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 2
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 744507534}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
