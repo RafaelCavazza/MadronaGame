@@ -141,7 +141,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1f9a28f88f65f1a479152273d30cdd2a, type: 3}
-    m_FontSize: 42
+    m_FontSize: 41
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
     fam\xEDlia do perigo.\n\nSeu objetivo \xE9 alcan\xE7ar um bot\xE3o que est\xE1
     presente ao final de cada fase, ele aciona a m\xE1quina da chuva para apagar o
     fogo.\n\nCom um toque em qualquer lugar na tela o barril joga Madrona para onde
-    sua seta est\xE1 apontando.\n\nBoa sorte ;)"
+    sua seta est\xE1 apontando.\nBoa sorte ;)"
 --- !u!222 &33809351
 CanvasRenderer:
   m_ObjectHideFlags: 0
