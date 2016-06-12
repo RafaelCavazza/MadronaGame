@@ -111,13 +111,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 811761433}
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: 500}
-  m_SizeDelta: {x: 700, y: 1000}
+  m_AnchoredPosition: {x: 346, y: 566}
+  m_SizeDelta: {x: 700, y: 1280}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &33809350
 MonoBehaviour:
@@ -140,7 +141,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1f9a28f88f65f1a479152273d30cdd2a, type: 3}
-    m_FontSize: 45
+    m_FontSize: 42
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -151,12 +152,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ol\xE1 jogador!\n\nUm empres\xE1rio est\xE1 tentando queimar a floresta
-    para obter espa\xE7o e construir um novo Resort.\n\nVoc\xEA ir\xE1 assumir o controle
+  m_Text: "Ol\xE1 jogador!\nUm empres\xE1rio est\xE1 tentando queimar a floresta para
+    obter espa\xE7o e construir um novo Resort.\n\nVoc\xEA ir\xE1 assumir o controle
     de Madrona, um tatu bola que vive na floresta e precisa proteger sua casa e sua
-    fam\xEDlia do perigo.\nSeu objetivo \xE9 alcan\xE7ar um bot\xE3o que est\xE1 presente
-    ao final de cada fase, ele aciona a m\xE1quina da chuva para apagar o fogo.\n\nBoa
-    sorte ;)"
+    fam\xEDlia do perigo.\n\nSeu objetivo \xE9 alcan\xE7ar um bot\xE3o que est\xE1
+    presente ao final de cada fase, ele aciona a m\xE1quina da chuva para apagar o
+    fogo.\n\nCom um toque em qualquer lugar na tela o barril joga Madrona para onde
+    sua seta est\xE1 apontando.\n\nBoa sorte ;)"
 --- !u!222 &33809351
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -221,6 +223,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -307,6 +310,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 33809349}
   - {fileID: 1054323849}
@@ -345,12 +349,13 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 811761433}
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -500}
+  m_AnchoredPosition: {x: 0, y: -544}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054323850
@@ -532,6 +537,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -590,6 +596,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.4, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
