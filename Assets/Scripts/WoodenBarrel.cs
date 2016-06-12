@@ -30,6 +30,12 @@ public class WoodenBarrel : MonoBehaviour
     public bool MoveYAxisDownToUp;
     public bool MoveYAxisCentered;
 
+    public bool StartOnPlayerEnter;
+    public bool StopOnPlayerExit;
+
+    public bool playerEntered = false;
+    public bool playerExited = false;
+
     void Start()
     {
         StartedPosition = transform.position;
@@ -41,6 +47,12 @@ public class WoodenBarrel : MonoBehaviour
     {
         if (!Pause.paused)
         {
+            if (StartOnPlayerEnter && !playerEntered)
+                return;
+
+            if (StopOnPlayerExit && playerExited)
+                return;
+
             MoveXAxisFunc();
             MoveYAxisFunc();
             RotateBarrel();

@@ -67,7 +67,7 @@ namespace UnityStandardAssets._2D
                     m_LastTargetPosition = target.position;
                 }
             }
-
+            CreatNewBackGround();
             if (Input.GetKeyDown(KeyCode.Escape)) { SceneManager.LoadScene("LevelMenu"); }
         }
 

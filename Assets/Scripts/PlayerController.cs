@@ -1,11 +1,13 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets._2D;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
+    public Camera _camera;
 
     public bool Pow { get; set; }
     private Rigidbody2D MyRigidbody;
@@ -19,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     private bool BarrelRotatePlayer = false;
     private float BarrelRotatePlayerSpeed = 0;
-
+   
     void Start()
     {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
@@ -50,7 +52,7 @@ public class PlayerController : MonoBehaviour
             BarrelBoxColider = colliderObject.gameObject.GetComponent<BoxCollider2D>();
             PlayerColider.enabled = false;
             Barrel = colliderObject.gameObject.GetComponent<WoodenBarrel>();
-
+            Barrel.playerEntered = true;
             if (Barrel.X)
                 SceneManager.LoadScene("GameOver");
 
@@ -59,6 +61,11 @@ public class PlayerController : MonoBehaviour
             DisableGravity();
             isInBarrel = true;
             HidePlayer();
+            if (_camera != null)
+            {
+                var follow = _camera.GetComponent<Camera2DFollow>();
+                follow.target = Barrel.transform;
+            }
         }
     }
 
@@ -113,12 +120,18 @@ public class PlayerController : MonoBehaviour
             JumpSound.Play();
 
         Barrel.ItHasPlayer = false;
+        Barrel.playerExited = true;
         PlayerColider.enabled = true;
         Pow = true;
         isInBarrel = false;
 
         EnableGravity();
         ShowPlayer();
+        if (_camera != null)
+        {
+            var follow = _camera.GetComponent<Camera2DFollow>();
+            follow.target = this.transform;
+        }
     }
 
     public double ConvertToRadians(double angle)

@@ -1092,9 +1092,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotation: 0
+  Rotation: 1
   RotationDirection: 1
-  RotationAngle: 180
+  RotationAngle: 30
   ExitSpeed: 80
   ContinuousRotation: 0
   RotatePlayer: 1
@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Rotation: 0
+  Rotation: 1
   RotationDirection: -1
   RotationAngle: 180
   ExitSpeed: 120
