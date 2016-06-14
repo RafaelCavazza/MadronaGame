@@ -913,7 +913,7 @@ MonoBehaviour:
   speed: 50
   jumpForce: 100
   _camera: {fileID: 744507534}
-  PowSound: {fileID: 1936698196}
+  PowSound: {fileID: 2086600531}
   JumpSound: {fileID: 723907924}
 --- !u!50 &502143247
 Rigidbody2D:
@@ -971,7 +971,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.008726536, w: 0.9999619}
   m_LocalPosition: {x: -28.3, y: -37.4, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4

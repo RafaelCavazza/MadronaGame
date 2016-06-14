@@ -5,6 +5,13 @@ public class Pause : MonoBehaviour
     public static bool paused { get; set; }
     public PlayerController player;
 
+    void Start()
+    {
+        Time.timeScale = 1f;
+        paused = false;
+        player.enabled = true;
+    }
+
     public void togglePause()
     {
         //Remove pause
