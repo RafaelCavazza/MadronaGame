@@ -10,6 +10,9 @@ public class ButtonScript : MonoBehaviour
             case "Retry":
                 SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
                 break;
+            case "RetryPause":
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                break;
             case "Done":
                 int level = int.Parse(PlayerPrefs.GetString("Level").Substring(5));
                 if (level < 10)
