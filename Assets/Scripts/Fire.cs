@@ -16,17 +16,18 @@ public class Fire : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag.Equals("Player"))
-            SceneManager.LoadScene("GameOver");
-        else if (other.tag.Equals("Barrel"))
+        switch (other.tag)
         {
-            WoodenBarrel barril = other.GetComponent<WoodenBarrel>();
-            if (barril.ItHasPlayer)
+            case "Player":
                 SceneManager.LoadScene("GameOver");
-            else
-                Destroy(other.gameObject);
+                break;
+            case "Barrel":
+                WoodenBarrel barril = other.GetComponent<WoodenBarrel>();
+                if (barril.ItHasPlayer)
+                    SceneManager.LoadScene("GameOver");
+                else
+                    Destroy(other.gameObject);
+                break;
         }
-        else if (!other.tag.Contains("Background"))
-            Destroy(other.gameObject);
     }
 }
