@@ -5,13 +5,13 @@ using UnityEngine.UI;
 public class HUDScript : MonoBehaviour
 {
 
-    float playerScrore;
+    public static float playerScrore;
     public Text text;
 
     // Use this for initialization
     void Start()
     {
-        playerScrore = 120;
+        playerScrore = 60;
     }
 
     // Update is called once per frame

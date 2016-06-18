@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 //Adding this allows us to access members of the UI namespace including Text.
 using UnityEngine.UI;
