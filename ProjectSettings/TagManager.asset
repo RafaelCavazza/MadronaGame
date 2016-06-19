@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Fire
   - POW
+  - Coin
   layers:
   - Default
   - TransparentFX
