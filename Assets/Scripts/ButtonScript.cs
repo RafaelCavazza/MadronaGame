@@ -8,17 +8,25 @@ public class ButtonScript : MonoBehaviour
         switch (scene)
         {
             case "Retry":
-                SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
+                if (PlayerPrefs.GetString("Level") == "LevelBonus")
+                    SceneManager.LoadScene("Level10");
+                else
+                    SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
                 break;
             case "RetryPause":
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 break;
             case "Done":
-                int level = int.Parse(PlayerPrefs.GetString("Level").Substring(5));
-                if (level < 10)
-                    SceneManager.LoadScene("Level" + (level + 1));
+                if (PlayerPrefs.GetString("Level") == "LevelBonus")
+                    SceneManager.LoadScene("Creditos");
                 else
-                    SceneManager.LoadScene("Menu");
+                {
+                    int level = int.Parse(PlayerPrefs.GetString("Level").Substring(5));
+                    if (level < 10)
+                        SceneManager.LoadScene("Level" + (level + 1));
+                    else
+                        SceneManager.LoadScene("Creditos");
+                }
                 break;
             default:
                 SceneManager.LoadScene(scene);

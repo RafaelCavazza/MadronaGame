@@ -152,12 +152,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ol\xE1! Um empres\xE1rio est\xE1 tentando queimar a floresta para obter
-    espa\xE7o e construir um novo resort.\n\nPara imped\xED-lo, voc\xEA assumir\xE1
-    o controle de Madrona, um tatu bola que vive na floresta e precisa proteger sua
-    casa e sua fam\xEDlia do perigo.\n\nSeu objetivo \xE9 alcan\xE7ar um bot\xE3o
-    que est\xE1 presente ao final de cada fase. Ele acionar\xE1 a m\xE1quina da chuva
-    para apagar o fogo.\n\nCom um toque em qualquer lugar na tela o barril \xE9 acionado.\n\nBoa
+  m_Text: "Um empres\xE1rio est\xE1 tentando queimar a floresta para obter espa\xE7o
+    e construir um novo resort.\n\nPara imped\xED-lo, voc\xEA assumir\xE1 o controle
+    de Madrona, um tatu bola que vive na floresta e precisa proteger sua casa e sua
+    fam\xEDlia do perigo.\n\nSeu objetivo \xE9 alcan\xE7ar um bot\xE3o que est\xE1
+    presente ao final de cada fase. Ele acionar\xE1 a m\xE1quina da chuva para apagar
+    o fogo.\n\nCom um toque em qualquer lugar na tela o barril \xE9 acionado.\n\nBoa
     sorte ;)"
 --- !u!222 &33809351
 CanvasRenderer:
@@ -368,7 +368,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SOBRE
+  m_Text: "Ol\xE1 jogador !"
 --- !u!222 &747467807
 CanvasRenderer:
   m_ObjectHideFlags: 0

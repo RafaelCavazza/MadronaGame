@@ -1,11 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WinButtonScript : MonoBehaviour {
+public class WinButtonScript : MonoBehaviour
+{
+
+    public bool RedirectToBonus = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag.Equals("Player"))
-            SceneManager.LoadScene("StageComplete");
+        {
+            if (RedirectToBonus)
+                SceneManager.LoadScene("LevelBonus");
+            else
+                SceneManager.LoadScene("StageComplete");
+        }
     }
 }
