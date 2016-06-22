@@ -33,4 +33,9 @@ public class ButtonScript : MonoBehaviour
                 break;
         }
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
