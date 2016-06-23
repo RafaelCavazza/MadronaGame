@@ -89,15 +89,15 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: com.CafeinaDev.MadronaJumper
-  bundleVersion: 1.0
+  bundleIdentifier: com.CafeinaDev.MadronaGame
+  bundleVersion: 1.1
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: 238c02fce0289eb4ba4c814c2f312eea
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 19
   AndroidPreferredInstallLocation: 1
   aotOptions: 
